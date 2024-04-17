@@ -1,0 +1,148 @@
+Apr 09, 2024 9:27:53 PM runShop main
+INFO: Application Started
+Apr 09, 2024 9:28:06 PM runShop main
+INFO: User attempted login
+Apr 09, 2024 9:28:06 PM runShop main
+INFO: Login successful
+Apr 09, 2024 9:28:07 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 09, 2024 9:28:08 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 9:28:08 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 09, 2024 9:28:10 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 9:28:11 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Back.
+Apr 09, 2024 9:28:18 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 9:28:19 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 09, 2024 9:28:22 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 09, 2024 9:28:24 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 09, 2024 9:28:24 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 09, 2024 9:28:24 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 09, 2024 9:28:24 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 09, 2024 9:28:32 PM runShop main
+INFO: Application Ended
+Apr 09, 2024 9:32:46 PM runShop main
+INFO: Application Started
+Apr 09, 2024 9:32:52 PM runShop main
+INFO: User attempted login
+Apr 09, 2024 9:32:52 PM runShop main
+INFO: Login successful
+Apr 09, 2024 9:32:56 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 09, 2024 9:32:56 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 9:32:57 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Back.
+Apr 09, 2024 9:33:00 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 09, 2024 9:33:01 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 09, 2024 9:33:01 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 09, 2024 9:33:01 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 09, 2024 9:33:01 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 09, 2024 9:33:03 PM runShop main
+INFO: Application Ended
+Apr 09, 2024 11:02:04 PM runShop main
+INFO: Application Started
+Apr 09, 2024 11:02:20 PM runShop main
+INFO: User attempted login
+Apr 09, 2024 11:02:20 PM runShop main
+INFO: Login successful
+Apr 09, 2024 11:02:21 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 09, 2024 11:02:22 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:02:23 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 09, 2024 11:02:24 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 09, 2024 11:02:34 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 09, 2024 11:02:34 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 09, 2024 11:02:34 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 09, 2024 11:02:34 PM InputInterpreter purchaseCar
+INFO: Purchase failed, not enough money.
+Apr 09, 2024 11:02:37 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:02:40 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 09, 2024 11:02:42 PM runShop main
+INFO: Application Ended
+Apr 09, 2024 11:03:00 PM runShop main
+INFO: Application Started
+Apr 09, 2024 11:03:03 PM runShop main
+INFO: User attempted login
+Apr 09, 2024 11:03:03 PM runShop main
+INFO: Login successful
+Apr 09, 2024 11:03:05 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 09, 2024 11:03:05 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:03:06 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 09, 2024 11:03:08 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:03:10 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> New.
+Apr 09, 2024 11:03:13 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:03:14 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Back.
+Apr 09, 2024 11:03:16 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 09, 2024 11:03:21 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 09, 2024 11:03:21 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 09, 2024 11:03:21 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 09, 2024 11:03:21 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 09, 2024 11:03:28 PM runShop main
+INFO: Application Ended
+Apr 09, 2024 11:04:34 PM runShop main
+INFO: Application Started
+Apr 09, 2024 11:04:43 PM runShop main
+INFO: User attempted login
+Apr 09, 2024 11:04:43 PM runShop main
+INFO: Login successful
+Apr 09, 2024 11:04:45 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 09, 2024 11:04:46 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:04:48 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> New.
+Apr 09, 2024 11:04:49 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:04:50 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 09, 2024 11:04:52 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 09, 2024 11:04:53 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Back.
+Apr 09, 2024 11:04:56 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 09, 2024 11:04:59 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 09, 2024 11:04:59 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 09, 2024 11:04:59 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 09, 2024 11:04:59 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 09, 2024 11:05:02 PM runShop main
+INFO: Application Ended
