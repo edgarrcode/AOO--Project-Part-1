@@ -6,11 +6,12 @@
 * Course: CS 3331 – Advanced Object-Oriented Programming
 * Instructor: Dr. Bhanukiran Gurijala
 * Programming assignment 1
-* Honesty Statment: We completed this work entirely on our own without any outside sources including peers, experts, online sources.
+* Honesty Statement: We completed this work entirely on our own without any outside sources including peers, experts, online sources.
 * @author Carlos Cabral and Edgar Rodriguez
 * @version 1.1
 */
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -29,7 +30,7 @@ public class runShop{
         FileReader2 reader2 = new FileReader2();
         FileReader2 reader3 = new FileReader2();
         logger.info("Application Started");
-        reader2.setInputFile("user_data.csv");
+        reader2.setInputFile("7 user_data2.csv");
         String[][] data = reader2.readCSV();
         printer.printLogin();
         String username = scanner.nextLine();
@@ -38,7 +39,7 @@ public class runShop{
         String[] loginInfo = inputLogger.loginLogger(username, password);
         String info = interpreter.loginInfo(loginInfo, 0);
         String[][] userData1 = reader2.filterDataByCondition(data, info, 6);
-        reader3.setInputFile("car_data.csv");
+        reader3.setInputFile("6 car_data2.csv");
         String[] infoToSendtoExcel;
         if (interpreter.loginChecker(loginInfo, userData1)){
             logger.info("Login successful"); // Log successful login
@@ -50,14 +51,19 @@ public class runShop{
             while (menuInput!=5) {
                 inputLogger.menuLogger(menuInput);
                 String[][] carData = reader3.readCSV();
-                Car car=null;
+
                 infoToSendtoExcel=interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner,customer);
                 System.out.println("\n");
-                if (car!=null) {
+                Car car=InputInterpreter.getCar();
+               //Fixed if statement. Overwritten data was printing 'null' on new file 
+                if (null!=car) {
                     String[][] newUserData=reader2.updatedUserDataArrayMaker(data,infoToSendtoExcel,customer);
-                    reader2.writeNewCSV(newUserData,"user_data2.csv");
+                    //debugging
+                    //System.out.println(Arrays.toString(new String[]{newUserData[9][3]}));
+                    // printer.printALLData(newUserData);
+                    reader2.writeNewCSV(newUserData,"7 user_data2.csv");
                     String[][] newCarData= reader3.updatedCarDataArrayMaker(carData,infoToSendtoExcel,InputInterpreter.getCar());
-                    reader3.writeNewCSV(newCarData,"car_data2.csv");   
+                    reader3.writeNewCSV(newCarData,"6 car_data2.csv");
                 }
                 printer.printMenu();
                 menuInput=Integer.parseInt(scanner.nextLine());
