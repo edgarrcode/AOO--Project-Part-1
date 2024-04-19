@@ -124,6 +124,23 @@ public class InputInterpreter {
             System.out.println("Invalid login");
             return false;}
     }
+    //New login checker: compares the user input to what is actually on the new userdata
+    //if both are true, user is allowed in
+    public Boolean newLoginChecker(String[] info,String[][] newScrambledUserData,Finder finder){
+        int userNameIndex=finder.findColumnIndex(newScrambledUserData,"Username");
+        int passWordIndex=finder.findColumnIndex(newScrambledUserData,"Password");
+
+        String[] userNames=finder.getColumnValues(newScrambledUserData,userNameIndex);
+        String[] passWord=finder.getColumnValues(newScrambledUserData,passWordIndex);
+
+        if (finder.findUserInputInTheNewColumn(info,userNames,0) &&
+                finder.findUserInputInTheNewColumn(info,passWord,1) ){
+            return true;
+        }
+
+       System.out.println("Invalid login");
+        return false;
+    }
 
     /**
      * Main logic handler
