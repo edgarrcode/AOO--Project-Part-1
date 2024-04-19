@@ -30,16 +30,17 @@ public class runShop{
         FileReader2 reader2 = new FileReader2();
         FileReader2 reader3 = new FileReader2();
         logger.info("Application Started");
-        reader2.setInputFile("7 user_data2.csv");
+        reader2.setInputFile("user_data.csv");
         String[][] data = reader2.readCSV();
-        printer.printLogin();
+        printer.printLoginUsername();
         String username = scanner.nextLine();
+        printer.printLoginPassword();
         String password = scanner.nextLine();
         logger.info("User attempted login");
         String[] loginInfo = inputLogger.loginLogger(username, password);
         String info = interpreter.loginInfo(loginInfo, 0);
         String[][] userData1 = reader2.filterDataByCondition(data, info, 6);
-        reader3.setInputFile("6 car_data2.csv");
+        reader3.setInputFile("car_data.csv");
         String[] infoToSendtoExcel;
         if (interpreter.loginChecker(loginInfo, userData1)){
             logger.info("Login successful"); // Log successful login
@@ -61,9 +62,9 @@ public class runShop{
                     //debugging
                     //System.out.println(Arrays.toString(new String[]{newUserData[9][3]}));
                     // printer.printALLData(newUserData);
-                    reader2.writeNewCSV(newUserData,"7 user_data2.csv");
+                    reader2.writeNewCSV(newUserData,"user_data2.csv");
                     String[][] newCarData= reader3.updatedCarDataArrayMaker(carData,infoToSendtoExcel,InputInterpreter.getCar());
-                    reader3.writeNewCSV(newCarData,"6 car_data2.csv");
+                    reader3.writeNewCSV(newCarData,"car_data2.csv");
                 }
                 printer.printMenu();
                 menuInput=Integer.parseInt(scanner.nextLine());

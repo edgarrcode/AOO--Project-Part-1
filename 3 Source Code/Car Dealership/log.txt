@@ -178,3 +178,63 @@ Apr 09, 2024 11:38:36 PM runShop main
 SEVERE: An unexpected error occurred: For input string: "d"
 Apr 09, 2024 11:38:36 PM runShop main
 INFO: Application Ended
+Apr 17, 2024 10:46:41 PM runShop main
+INFO: Application Started
+Apr 17, 2024 10:46:50 PM runShop main
+INFO: User attempted login
+Apr 17, 2024 10:46:50 PM runShop main
+SEVERE: An unexpected error occurred: Cannot read the array length because "data" is null
+Apr 17, 2024 10:46:50 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 6:20:43 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:20:50 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:20:50 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 6:21:11 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:21:14 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:21:14 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 6:21:21 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:21:26 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:21:26 PM runShop main
+INFO: Login successful
+Apr 18, 2024 6:21:26 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 6:21:26 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 6:21:46 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:22:13 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:22:13 PM runShop main
+INFO: Login successful
+Apr 18, 2024 6:22:13 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 6:22:13 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 6:26:34 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:26:49 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:26:49 PM runShop main
+INFO: Login successful
+Apr 18, 2024 6:27:00 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 6:27:04 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 18, 2024 6:43:43 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:43:50 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:43:50 PM runShop main
+INFO: Login successful
+Apr 18, 2024 6:43:58 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 6:44:00 PM runShop main
+INFO: Application Ended
