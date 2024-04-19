@@ -238,3 +238,223 @@ Apr 18, 2024 6:43:58 PM InputInterpreter menuChoice
 INFO: Menu Option: 1. Display all cars.
 Apr 18, 2024 6:44:00 PM runShop main
 INFO: Application Ended
+Apr 18, 2024 6:51:12 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:51:22 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:51:22 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 6:51:34 PM runShop main
+INFO: Application Started
+Apr 18, 2024 6:51:41 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 6:51:41 PM runShop main
+INFO: Login successful
+Apr 18, 2024 6:51:47 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 6:51:50 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "sdf"
+Apr 18, 2024 6:51:50 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:03:48 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:03:58 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:03:58 PM runShop main
+INFO: Login successful
+Apr 18, 2024 7:04:11 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 7:04:15 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "dlkfjaf"
+Apr 18, 2024 7:04:15 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:04:49 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:04:51 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:04:51 PM runShop main
+INFO: Login successful
+Apr 18, 2024 7:04:58 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 7:05:00 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "kldkdk"
+Apr 18, 2024 7:05:00 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:05:42 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:05:47 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:05:47 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:06:12 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:06:16 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:06:16 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:06:21 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:06:24 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:06:24 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:06:58 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:06:59 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:06:59 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:07:12 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:07:14 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:07:14 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 7:07:20 PM runShop main
+INFO: Application Started
+Apr 18, 2024 7:07:23 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 7:07:23 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 8:53:01 PM runShop main
+INFO: Application Started
+Apr 18, 2024 8:55:45 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 8:55:45 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 8:57:31 PM runShop main
+INFO: Application Started
+Apr 18, 2024 8:57:34 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 8:57:34 PM runShop main
+INFO: Login successful
+Apr 18, 2024 8:57:34 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 8:57:34 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 8:59:09 PM runShop main
+INFO: Application Started
+Apr 18, 2024 8:59:13 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 8:59:13 PM runShop main
+INFO: Login successful
+Apr 18, 2024 8:59:13 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 8:59:13 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:00:32 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:00:36 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:00:36 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:00:36 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 9:00:36 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:04:49 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:04:57 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:04:57 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:04:57 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 9:04:57 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:05:31 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:05:35 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:05:35 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:05:35 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "null"
+Apr 18, 2024 9:05:35 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:06:28 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:06:43 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:06:43 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:07:02 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:07:10 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:07:13 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:07:13 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:07:16 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 9:07:18 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "w"
+Apr 18, 2024 9:07:18 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:08:00 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:08:06 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:08:06 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:08:12 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 9:08:23 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 9:08:29 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "e"
+Apr 18, 2024 9:08:29 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:43:28 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:43:30 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:43:30 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:43:43 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:43:45 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:43:45 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:43:53 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 9:43:56 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 9:43:57 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 9:44:00 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "ddd"
+Apr 18, 2024 9:44:00 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:48:03 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:48:08 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:48:08 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:48:13 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 9:48:18 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 9:48:19 PM runShop main
+SEVERE: An unexpected error occurred: For input string: "dddd"
+Apr 18, 2024 9:48:19 PM runShop main
+INFO: Application Ended
+Apr 18, 2024 9:49:37 PM runShop main
+INFO: Application Started
+Apr 18, 2024 9:49:42 PM runShop main
+INFO: User attempted login
+Apr 18, 2024 9:49:42 PM runShop main
+INFO: Login successful
+Apr 18, 2024 9:49:45 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 18, 2024 9:49:49 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 9:49:52 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 18, 2024 9:49:55 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 18, 2024 9:49:59 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.

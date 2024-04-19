@@ -151,7 +151,8 @@ public class InputInterpreter {
             case 2:
             logger.info("Menu Option: 2. Filter Cars (used / new).");
                 printer.printFilterCars();
-                int x=Integer.parseInt(scanner.nextLine());
+                //int x=Integer.parseInt(scanner.nextLine());
+                int x = MenuInputReader.readMenuIntegerInput(scanner);
                 if (x==1) {
                     logger.info("Menu Option: 2. Filter Cars (used / new)> New.");
                     String condition = "new";
