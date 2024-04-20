@@ -1,4 +1,4 @@
-public class Person implements User {
+public class Admin implements User {
 
 //public abstract class Person {
 String username;
@@ -9,7 +9,7 @@ String id;
 boolean membership;
 
 String carsBought;
-    public Person(String id, String fullName, double money,String carsBought, boolean membership,String username, String password) {
+    public Admin (String id, String fullName, double money,String carsBought, boolean membership,String username, String password) {
         this.username = username;
         this.password = password;
         this.fullName = fullName;

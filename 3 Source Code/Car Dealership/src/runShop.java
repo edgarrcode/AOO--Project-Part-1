@@ -22,7 +22,6 @@ public class runShop{
     LoggingConfiguration.setupLogging();
     Logger logger = Logger.getLogger("");
 
-
     try {
         Printer printer = new Printer();
         Scanner scanner = new Scanner(System.in);

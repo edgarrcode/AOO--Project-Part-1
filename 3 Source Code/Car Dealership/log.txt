@@ -702,3 +702,39 @@ Apr 19, 2024 11:15:48 PM runShop main
 INFO: Login successful
 Apr 19, 2024 11:15:50 PM InputInterpreter menuChoice
 INFO: Menu Option: 1. Display all cars.
+Apr 20, 2024 3:23:52 PM runShop main
+INFO: Application Started
+Apr 20, 2024 5:20:45 PM runShop main
+INFO: Application Started
+Apr 20, 2024 5:20:49 PM runShop main
+INFO: User attempted login
+Apr 20, 2024 5:20:49 PM runShop main
+INFO: Login successful
+Apr 20, 2024 5:20:51 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 20, 2024 5:20:54 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 20, 2024 5:20:58 PM InputInterpreter menuChoice
+INFO: Menu Option: 4. View Tickets
+Apr 20, 2024 5:21:01 PM runShop main
+INFO: Application Ended
+Apr 20, 2024 5:22:45 PM runShop main
+INFO: Application Started
+Apr 20, 2024 5:22:48 PM runShop main
+INFO: User attempted login
+Apr 20, 2024 5:22:48 PM runShop main
+INFO: Login successful
+Apr 20, 2024 5:24:45 PM runShop main
+INFO: Application Started
+Apr 20, 2024 5:24:48 PM runShop main
+INFO: User attempted login
+Apr 20, 2024 5:24:48 PM runShop main
+INFO: Login successful
+Apr 20, 2024 5:24:49 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 20, 2024 5:24:50 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 20, 2024 5:24:51 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 20, 2024 5:24:53 PM runShop main
+INFO: Application Ended
