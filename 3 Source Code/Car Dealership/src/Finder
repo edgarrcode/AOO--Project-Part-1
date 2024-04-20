@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Finder {
+
+    public int findColumnIndex(String[][] data, String columnName) {
+        for (int i = 0; i < data[0].length; i++) {
+            if (data[0][i].equalsIgnoreCase(columnName)) {
+                return i;
+            }
+        }
+        return -1; // Column not found
+    }
+    public String[] getColumnValues(String[][] data, int columnIndex) {
+        String[] columnValues = new String[38];
+        for (int i = 0; i < data.length; i++) {
+            // Start from row 1 (skip header)
+            if (columnIndex < data[i].length) {
+                columnValues[i]=data[i][columnIndex];
+            }
+        }
+        return columnValues;
+    }
+    public boolean findUserInputInTheNewColumn(String[] info,String[] columns,int inputType ){
+        for (int i=1; i <columns.length;i++){
+            if(info[inputType].equals(columns[i]))
+            {
+            return true;    }
+        }
+        return false;
+        
+    }
+    public String findDataInColumn(String dataToFind, String[] columnData){
+        for (int i = 1; i < columnData.length; i++) {
+            // Start from row 1 (skip header)
+            if (dataToFind.equals(columnData[i])){
+                return columnData[i];
+            }
+        }
+
+        return null;
+    }
+
+}
