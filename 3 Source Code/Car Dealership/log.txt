@@ -660,3 +660,45 @@ Apr 18, 2024 10:40:27 PM InputInterpreter menuChoice
 INFO: Menu Option: 2. Filter Cars (used / new).
 Apr 19, 2024 7:31:15 PM runShop main
 SEVERE: An unexpected error occurred: No line found
+Apr 19, 2024 10:29:12 PM runShop main
+INFO: Application Started
+Apr 19, 2024 10:29:20 PM runShop main
+INFO: User attempted login
+Apr 19, 2024 10:29:20 PM runShop main
+INFO: Application Ended
+Apr 19, 2024 10:29:22 PM runShop main
+INFO: Application Started
+Apr 19, 2024 10:29:43 PM runShop main
+INFO: User attempted login
+Apr 19, 2024 10:29:43 PM runShop main
+SEVERE: An unexpected error occurred: Index 0 out of bounds for length 0
+Apr 19, 2024 10:29:43 PM runShop main
+INFO: Application Ended
+Apr 19, 2024 10:29:45 PM runShop main
+INFO: Application Started
+Apr 19, 2024 10:29:49 PM runShop main
+INFO: User attempted login
+Apr 19, 2024 10:29:49 PM runShop main
+INFO: Login successful
+Apr 19, 2024 10:33:26 PM runShop main
+INFO: Application Started
+Apr 19, 2024 10:34:02 PM runShop main
+INFO: User attempted login
+Apr 19, 2024 10:34:02 PM runShop main
+INFO: Login successful
+Apr 19, 2024 10:34:06 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 19, 2024 10:34:52 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 19, 2024 10:34:58 PM runShop main
+SEVERE: An unexpected error occurred: Index 0 out of bounds for length 0
+Apr 19, 2024 10:34:58 PM runShop main
+INFO: Application Ended
+Apr 19, 2024 11:15:42 PM runShop main
+INFO: Application Started
+Apr 19, 2024 11:15:48 PM runShop main
+INFO: User attempted login
+Apr 19, 2024 11:15:48 PM runShop main
+INFO: Login successful
+Apr 19, 2024 11:15:50 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
