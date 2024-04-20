@@ -2,7 +2,9 @@
 * This class has the methods to purchase a car.
 */
 import java.io.File;
+import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -124,9 +126,8 @@ public class InputInterpreter {
             System.out.println("Invalid login");
             return false;}
     }
-    //New login checker: compares the user input to what is actually on the new userdata
-    //if both are true, user is allowed in
-    public Boolean newLoginChecker(String[] info,String[][] newScrambledUserData,Finder finder){
+
+   public Boolean newLoginChecker(String[] info,String[][] newScrambledUserData,Finder finder){
         int userNameIndex=finder.findColumnIndex(newScrambledUserData,"Username");
         int passWordIndex=finder.findColumnIndex(newScrambledUserData,"Password");
 
@@ -140,6 +141,17 @@ public class InputInterpreter {
 
        System.out.println("Invalid login");
         return false;
+    }
+    public Person personBuilder(String [] rowContentsForPersonValues, Finder f,String[][] data){
+
+        return new Customer(f.valueFinderInRow("ID",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("First Name",rowContentsForPersonValues,data)[0]+" "+f.valueFinderInRow("Last Name",rowContentsForPersonValues,data)[0],
+                Double.parseDouble(f.valueFinderInRow("Money Available",rowContentsForPersonValues,data)[0]),
+                f.valueFinderInRow("Cars Purchased",rowContentsForPersonValues,data)[0],
+                false,
+                f.valueFinderInRow("Username",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Password",rowContentsForPersonValues,data)[0]
+                );
     }
 
     /**
@@ -168,8 +180,7 @@ public class InputInterpreter {
             case 2:
             logger.info("Menu Option: 2. Filter Cars (used / new).");
                 printer.printFilterCars();
-                //int x=Integer.parseInt(scanner.nextLine());
-                int x = MenuInputReader.readMenuIntegerInput(scanner);
+                int x=Integer.parseInt(scanner.nextLine());
                 if (x==1) {
                     logger.info("Menu Option: 2. Filter Cars (used / new)> New.");
                     String condition = "new";
@@ -190,6 +201,7 @@ public class InputInterpreter {
                 else {
                     logger.info("Menu Option: 2. Filter Cars (used / new)> invalid choice, going back to menu.");
                     System.out.println("invalid choice, going back to menu");
+
                 }
                 return null;
 
