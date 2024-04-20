@@ -61,9 +61,9 @@ public class runShop{
                 Car car=InputInterpreter.getCar();
                 if (null!=car) {
                     String[][] newUserData=reader2.updatedUserDataArrayMaker(data,infoToSendtoExcel,customer);
-                    reader2.writeNewCSV(newUserData,"user_data2.csv");
+                    reader2.writeNewCSV(newUserData,"user_data.csv");
                     String[][] newCarData= reader3.updatedCarDataArrayMaker(carData,infoToSendtoExcel,InputInterpreter.getCar());
-                    reader3.writeNewCSV(newCarData,"car_data2.csv");
+                    reader3.writeNewCSV(newCarData,"car_data.csv");
                 }
                 printer.printMenu();
                 menuInput = MenuInputReader.readMenuIntegerInput(scanner);

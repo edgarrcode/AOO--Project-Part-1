@@ -1,3 +1,7 @@
+/**
+* This class ensures user enters a valid menu option.
+*/
+
 import java.util.Scanner;
 
 public class MenuInputReader {

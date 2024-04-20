@@ -190,7 +190,6 @@ public class InputInterpreter {
                 else {
                     logger.info("Menu Option: 2. Filter Cars (used / new)> invalid choice, going back to menu.");
                     System.out.println("invalid choice, going back to menu");
-
                 }
                 return null;
 
