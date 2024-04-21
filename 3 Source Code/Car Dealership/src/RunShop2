@@ -79,7 +79,7 @@ public class RunShop2{
                     inputLogger.menuLogger(menuInput);
                     String[][] carData = reader3.readCSV();
 
-                    infoToSendtoExcel=interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner,customer);
+                    infoToSendtoExcel=interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner,customer,f);
                     System.out.println("\n");
                     Car car=InputInterpreter.getCar();
                     //Fixed if statement. Overwritten data was printing 'null' on new file
@@ -99,7 +99,7 @@ public class RunShop2{
             }
             else {
                 System.out.println("incorrect login information");
-                new runShop();
+                new RunShop2();
             }
         } catch (Exception e) {
             logger.severe("An unexpected error occurred: " + e.getMessage());
