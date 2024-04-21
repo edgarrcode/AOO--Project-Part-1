@@ -220,7 +220,6 @@ public class InputInterpreter {
     }
 
 
-
     /**
      * Main logic handler
      * Depending on user input several different processes take place
