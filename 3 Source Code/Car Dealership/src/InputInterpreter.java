@@ -42,15 +42,18 @@ public class InputInterpreter {
      * @param carToBuyData
      * @return
      */
-    public Car createCar(String[][] carToBuyData){
+    public Car createCar(String[][] carToBuyData,String[][] data,Finder f){
         String carType = carToBuyData[0][1].trim();
+        String[] rowContents = new String[15];
+
+        System.arraycopy(carToBuyData[0], 0, rowContents, 0, carToBuyData[0].length);
+
+
         logger.info("Creating car type");
         //depending on the car type a new car object is created
          switch (carType) {
             case "Hatchback" -> {
-               Car car = new Hatchback(carToBuyData[0][0], carToBuyData[0][1], carToBuyData[0][2], carToBuyData[0][3], carToBuyData[0][4],
-                        carToBuyData[0][5], carToBuyData[0][6], carToBuyData[0][7], carToBuyData[0][8], carToBuyData[0][9],
-                        Double.parseDouble(carToBuyData[0][10]), Integer.parseInt(carToBuyData[0][11]));
+                Car car=hatchbackBuilder(rowContents,f,data);
                 return car;
             }
             case "Sedan" -> {
@@ -153,6 +156,69 @@ public class InputInterpreter {
                 f.valueFinderInRow("Password",rowContentsForPersonValues,data)[0]
                 );
     }
+    public Sedan sedanBuilder(String [] rowContentsForPersonValues, Finder f,String[][] data){
+
+        return new Sedan(f.valueFinderInRow("ID",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Car Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Model",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Condition",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Color",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Capacity",rowContentsForPersonValues,data)[0],"0",
+                f.valueFinderInRow("Fuel Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Transmission",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Vin",rowContentsForPersonValues,data)[0],
+                Double.parseDouble(f.valueFinderInRow("Price",rowContentsForPersonValues,data)[0]),
+                Integer.parseInt(f.valueFinderInRow("Cars Available",rowContentsForPersonValues,data)[0]));
+
+    }
+    public SUV SUVBuilder(String [] rowContentsForPersonValues, Finder f,String[][] data){
+
+        return new SUV(f.valueFinderInRow("ID",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Car Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Model",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Condition",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Color",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Capacity",rowContentsForPersonValues,data)[0],
+                "0",
+                f.valueFinderInRow("Fuel Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Transmission",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Vin",rowContentsForPersonValues,data)[0],
+                Double.parseDouble(f.valueFinderInRow("Price",rowContentsForPersonValues,data)[0]),
+                Integer.parseInt(f.valueFinderInRow("Cars Available",rowContentsForPersonValues,data)[0]));
+
+    }
+    public Hatchback hatchbackBuilder(String [] rowContentsForPersonValues, Finder f,String[][] data){
+
+        return new Hatchback(f.valueFinderInRow("ID",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Car Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Model",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Condition",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Color",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Capacity",rowContentsForPersonValues,data)[0],"0",
+                f.valueFinderInRow("Fuel Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Transmission",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Vin",rowContentsForPersonValues,data)[0],
+                Double.parseDouble(f.valueFinderInRow("Price",rowContentsForPersonValues,data)[0]),
+                Integer.parseInt(f.valueFinderInRow("Cars Available",rowContentsForPersonValues,data)[0]));
+
+    }
+    public Pickup pickupBuilder(String [] rowContentsForPersonValues, Finder f,String[][] data){
+
+        return new Pickup(f.valueFinderInRow("ID",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Car Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Model",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Condition",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Color",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Capacity",rowContentsForPersonValues,data)[0],
+                "0",
+                f.valueFinderInRow("Fuel Type",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Transmission",rowContentsForPersonValues,data)[0],
+                f.valueFinderInRow("Vin",rowContentsForPersonValues,data)[0],
+                Double.parseDouble(f.valueFinderInRow("Price",rowContentsForPersonValues,data)[0]),
+                Integer.parseInt(f.valueFinderInRow("Cars Available",rowContentsForPersonValues,data)[0]));
+
+    }
+
 
     /**
      * Main logic handler
@@ -168,7 +234,7 @@ public class InputInterpreter {
      * @return
      */
     public String[] menuChoice(int menuInput, FileReader2 fileReader2,
-                           Printer printer, String[][] data, Scanner scanner, Person user){
+                           Printer printer, String[][] data, Scanner scanner, Person user, Finder f){
         String[] newDataToSendToExcelFile = new String[6];
 
         switch (menuInput){
@@ -209,9 +275,9 @@ public class InputInterpreter {
                 logger.info("Menu Option: 3. Purchase a car");
                 System.out.println("Please provide ID for the car you want to purchase");
                 String condition= scanner.nextLine();
-                String[][] carToBuyData=fileReader2.filterDataByCondition(data,condition,0);
+                String[][] carToBuyData=fileReader2.filterDataByCondition(data,condition,f.findColumnIndex(data,"ID"));
 
-                Car myNewCar=createCar(carToBuyData);
+                Car myNewCar=createCar(carToBuyData,data,f);
                 setCar(myNewCar);
                 newDataToSendToExcelFile=purchaseCar(myNewCar,user);
                 if (newDataToSendToExcelFile[0]==null){
