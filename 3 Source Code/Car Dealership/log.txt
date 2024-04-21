@@ -782,3 +782,29 @@ Apr 20, 2024 9:26:30 PM InputInterpreter menuChoice
 INFO: Menu Option: 2. Filter Cars (used / new)> Used.
 Apr 20, 2024 9:26:34 PM InputInterpreter menuChoice
 INFO: Menu Option: 4. View Tickets
+Apr 20, 2024 9:29:56 PM RunShop2 main
+INFO: Application Ended
+Apr 20, 2024 9:30:06 PM RunShop2 main
+INFO: Application Started
+Apr 20, 2024 9:30:09 PM RunShop2 main
+INFO: User attempted login
+Apr 20, 2024 9:30:09 PM RunShop2 main
+INFO: Login successful
+Apr 21, 2024 12:56:52 AM RunShop3 main
+INFO: Application Started
+Apr 21, 2024 12:56:52 AM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 21, 2024 12:56:57 AM RunShop3 authenticateUser
+INFO: Login successful
+Apr 21, 2024 12:56:58 AM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 21, 2024 12:56:59 AM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 21, 2024 12:57:01 AM RunShop3 main
+INFO: Application Ended
+Apr 21, 2024 12:57:03 AM RunShop3 main
+INFO: Application Started
+Apr 21, 2024 12:57:03 AM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 21, 2024 12:57:38 AM RunShop3 main
+INFO: Application Ended
