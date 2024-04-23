@@ -10,54 +10,44 @@
  * @author Carlos Cabral and Edgar Rodriguez
  * @version 1.1
  */
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class RunShop3 {
-    public static Logger logger = Logger.getLogger("");
-    public static Scanner scanner = new Scanner(System.in);
-    public static Printer printer = new Printer();
-    public static InputLogger inputLogger = new InputLogger();
-    public static InputInterpreter interpreter = new InputInterpreter();
-    public static FileReader2 reader2 = new FileReader2();
-    public static FileReader2 reader3 = new FileReader2();
-    public static Finder f = new Finder();
+    private static Logger logger = Logger.getLogger("");
+    private static Scanner scanner = new Scanner(System.in);
+    private static Printer printer = new Printer();
+    private static InputLogger inputLogger = new InputLogger();
+    private static InputInterpreter interpreter = new InputInterpreter();
+    private static FileReader2 reader2 = new FileReader2();
+    private static FileReader2 reader3 = new FileReader2();
+    private static Finder f = new Finder();
 
     public static void showAdminMenu() throws IOException {
-        AdminActions adminActions = new AdminActions(scanner);
         System.out.println("hello admin");
         while (true) {
             System.out.println("\n1. Add Car");
             System.out.println("2. Remove Car");
-            System.out.println("3. Display Cars");
-            System.out.println("4. Add User");
-            System.out.println("5. Exit");
+            System.out.println("3. Remove Car");
+            System.out.println("4. Exit");
             System.out.print("Choose an option: ");
             int choice = Integer.parseInt(scanner.nextLine());
 
             switch (choice) {
                 case 1:
-                    adminActions.addCar();
+                    addCar();
                     break;
                 case 2:
-                    adminActions.removeCar();
+                    removeCar();
                     break;
                 case 3:
-                    adminActions.displayCars();
-                    break;
+                    displayCars();
                 case 4:
-                    adminActions.addUser();
-                    break;
-                case 5:
                     System.out.println("Exiting...");
                     return;
                 default:
@@ -65,9 +55,9 @@ public class RunShop3 {
             }
         }
     }
-    public static void showPersonMenu(Person customer) throws IOException {
-        System.out.println("hello " + customer.getFullName());
-        reader3.setInputFile("car_data.csv");
+    public static void showPersonMenu(Person customer,String[][] userData,Finder f) throws Exception {
+        System.out.println("Hello " + customer.getFullName());
+        reader3.setInputFile("car_data_out.csv");
         String[] infoToSendtoExcel;
 
         printer.printMenu();
@@ -76,13 +66,79 @@ public class RunShop3 {
             inputLogger.menuLogger(menuInput);
             String[][] carData = reader3.readCSV();
             infoToSendtoExcel = interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner, customer, f);
+            //testing
+            //System.out.println(Arrays.toString(infoToSendtoExcel));
             if (null != InputInterpreter.getCar()) {
-                updateData(carData, infoToSendtoExcel, customer);
+                updateData(carData, infoToSendtoExcel, customer,userData,f);
             }
             printer.printMenu();
             menuInput = Integer.parseInt(scanner.nextLine());
         }
         System.out.println("Good bye!");
+    }
+    // Admin Method: Add new car
+    private static void addCar() throws IOException {
+        System.out.println("Enter the following details to add a car:");
+        System.out.print("Car Type: ");
+        String carType = scanner.nextLine();
+        System.out.print("Model: ");
+        String model = scanner.nextLine();
+        System.out.print("Condition: ");
+        String condition = scanner.nextLine();
+        System.out.print("Capacity: ");
+        String capacity = scanner.nextLine();
+        System.out.print("Year: ");
+        String year = scanner.nextLine();
+        System.out.print("Fuel Type: ");
+        String fuelType = scanner.nextLine();
+        System.out.print("Transmission: ");
+        String transmission = scanner.nextLine();
+        System.out.print("VIN: ");
+        String vin = scanner.nextLine();
+        System.out.print("Price: ");
+        String price = scanner.nextLine();
+        System.out.print("Cars Available: ");
+        String carsAvailable = scanner.nextLine();
+        System.out.print("Has Turbo (true/false): ");
+        String hasTurbo = scanner.nextLine();
+
+        String newCar = String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
+                carType, model, condition, capacity, year, fuelType, transmission, vin, price, carsAvailable, hasTurbo);
+
+        try (FileWriter fw = new FileWriter("admincar_out.csv", true);
+             BufferedWriter bw = new BufferedWriter(fw)) {
+            bw.write(newCar);
+        }
+        System.out.println("Car added successfully.");
+    }
+    //Admin Method: remove existing car
+    private static void removeCar() throws IOException {
+        System.out.print("Enter the VIN of the car to remove: ");
+        String vinToRemove = scanner.nextLine();
+
+        List<String> lines = Files.readAllLines(new File("admincar_out.csv").toPath());
+        List<String> updatedLines = lines.stream()
+                                         .filter(line -> !line.split(",")[7].equals(vinToRemove))
+                                         .collect(Collectors.toList());
+
+        try (FileWriter fw = new FileWriter("admincar_out.csv", false);
+             BufferedWriter bw = new BufferedWriter(fw)) {
+            for (String line : updatedLines) {
+                bw.write(line + "\n");
+            }
+        }
+        System.out.println("Car removed successfully.");
+    }
+    //Admin Method: display cars
+    private static void displayCars() throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader("admincar_out.csv"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading the file.");
+        }
     }
     public static void main(String[] args) throws Exception {
         LoggingConfiguration.setupLogging();
@@ -93,11 +149,12 @@ public class RunShop3 {
         logger.info("Application Ended");
     }
 
-    public static void authenticateUser() throws IOException {
-        reader2.setInputFile("user_data.csv");
+    private static void authenticateUser() throws Exception {
+        reader2.setInputFile("user_data_out.csv");
         String[][] data = reader2.readCSV();
         logger.info("User attempting to login");
         printer.printLoginUsername();
+        Finder f =new Finder();
         String username = scanner.nextLine();
 
         if ("admin".equals(username)) {
@@ -110,22 +167,31 @@ public class RunShop3 {
             if (interpreter.newLoginChecker(loginInfo, data, f)) {
                 logger.info("Login successful");
                 Person customer = buildPerson(data, username);
-                showPersonMenu(customer);
+                showPersonMenu(customer,data,f);
             } else {
                 System.out.println("Incorrect login information");
             }
         }
     }
 
-    public static Person buildPerson(String[][] data, String username) {
+    private static Person buildPerson(String[][] data, String username) {
         // Implementation to build person object
         return interpreter.personBuilder(f.rowFinder(data, f.findDataInColumn(username, f.getColumnValues(data, f.findColumnIndex(data, "Username")))), f, data);
     }
 
-    public static void updateData(String[][] carData, String[] infoToSendtoExcel, Person customer) throws IOException {
-        String[][] newUserData = reader2.updatedUserDataArrayMaker(carData, infoToSendtoExcel, customer);
+    private static void updateData(String[][] carData, String[] infoToSendtoExcel, Person customer, String[][] userData,Finder f) throws Exception {
+
+        String[][] newUserData = reader2.updatedUserDataArrayMaker(userData, infoToSendtoExcel, customer,f );
+        //testing
+        //System.out.println(Arrays.toString(newUserData[8]));
+
         reader2.writeNewCSV(newUserData, "user_data_out.csv");
-        String[][] newCarData = reader3.updatedCarDataArrayMaker(carData, infoToSendtoExcel, InputInterpreter.getCar());
+        //testing
+        //System.out.println(Arrays.toString(infoToSendtoExcel));
+        String[][] newCarData = reader3.updatedCarDataArrayMaker(carData, infoToSendtoExcel, InputInterpreter.getCar(),f);
+        //testing
+        //System.out.println(Arrays.toString(newCarData[2]));
+
         reader3.writeNewCSV(newCarData, "car_data_out.csv");
     }
 }
