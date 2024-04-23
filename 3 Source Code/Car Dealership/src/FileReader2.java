@@ -104,11 +104,11 @@ public class FileReader2 {
      This method updates the original user data array by replacing the users money with their new balance
      This method is hard coded and can be improved on.
      */
-    public String[][] updatedUserDataArrayMaker(String[][] originalData, String[] newData,Person user) {
+    public String[][] updatedUserDataArrayMaker(String[][] originalData, String[] newData,Person user, Finder finder) {
         for(int i=0; i<8;i++){
-            if (user.getId().equals(originalData[i][0])){
-                originalData[i][3]=newData[2];//money
-                originalData[i][4]=newData[1];//cars bought
+            if (user.getId().equals(originalData[i][finder.findColumnIndex(originalData,"ID")])){
+                originalData[i][finder.findColumnIndex(originalData,"Money Available")]=newData[2];//money
+                originalData[i][finder.findColumnIndex(originalData,"Cars Purchased")]=newData[1];//cars bought
             }
         }
         return originalData;
@@ -116,11 +116,11 @@ public class FileReader2 {
      This method updates the original car data array by decreasing the ammount of cars available
      This method is hard coded and can be improved on and maybe incorporated onto the previous method
      */
-    public String[][] updatedCarDataArrayMaker(String[][] originalData, String[] newData,Car car) {
+    public String[][] updatedCarDataArrayMaker(String[][] originalData, String[] newData,Car car,Finder f) {
         /**Iterates through original array to find the correct car based on the ID of the car object*/
         for(int i=0; i<12;i++){
-            if (car.getId().equals(originalData[i][0])){
-                originalData[i][11]=newData[0];
+            if (car.getId().equals(originalData[i][f.findColumnIndex(originalData,"ID")])){
+                originalData[i][f.findColumnIndex(originalData,"Cars Available")]=newData[0];
             }
         }
         /**returns data to be written later*/
