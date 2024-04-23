@@ -3,6 +3,7 @@
 */
 import java.io.File;
 import java.lang.reflect.Array;
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -43,6 +44,10 @@ public class InputInterpreter {
      * @return
      */
     public Car createCar(String[][] carToBuyData,String[][] data,Finder f){
+        if (carToBuyData.length == 0 || carToBuyData[0].length == 0) {
+            throw new IllegalArgumentException("carToBuyData cannot be empty");
+        }
+
         String carType = carToBuyData[0][1].trim();
         String[] rowContents = new String[15];
 
@@ -57,21 +62,15 @@ public class InputInterpreter {
                 return car;
             }
             case "Sedan" -> {
-                Car car = new Sedan(carToBuyData[0][0], carToBuyData[0][1], carToBuyData[0][2], carToBuyData[0][3], carToBuyData[0][4],
-                        carToBuyData[0][5], carToBuyData[0][6], carToBuyData[0][7], carToBuyData[0][8], carToBuyData[0][9],
-                        Double.parseDouble(carToBuyData[0][10]), Integer.parseInt(carToBuyData[0][11]));
+                Car car = sedanBuilder(rowContents,f,data);
                 return car;
             }
             case "SUV" -> {
-                Car car = new SUV(carToBuyData[0][0], carToBuyData[0][1], carToBuyData[0][2], carToBuyData[0][3], carToBuyData[0][4],
-                        carToBuyData[0][5], carToBuyData[0][6], carToBuyData[0][7], carToBuyData[0][8], carToBuyData[0][9],
-                        Double.parseDouble(carToBuyData[0][10]), Integer.parseInt(carToBuyData[0][11]));
+                Car car = SUVBuilder(rowContents,f,data);
                 return car;
             }
             case "Pickup" -> {
-                Car car = new Pickup(carToBuyData[0][0], carToBuyData[0][1], carToBuyData[0][2], carToBuyData[0][3], carToBuyData[0][4],
-                        carToBuyData[0][5], carToBuyData[0][6], carToBuyData[0][7], carToBuyData[0][8], carToBuyData[0][9],
-                        Double.parseDouble(carToBuyData[0][10]), Integer.parseInt(carToBuyData[0][11]));
+                Car car = pickupBuilder(rowContents,f,data);
                 return car;
             }
             default -> throw new IllegalArgumentException("Invalid car type: " + carToBuyData[0][1]);
@@ -277,6 +276,8 @@ public class InputInterpreter {
                 String condition= scanner.nextLine();
                 String[][] carToBuyData=fileReader2.filterDataByCondition(data,condition,f.findColumnIndex(data,"ID"));
 
+
+
                 Car myNewCar=createCar(carToBuyData,data,f);
                 setCar(myNewCar);
                 newDataToSendToExcelFile=purchaseCar(myNewCar,user);
@@ -290,6 +291,8 @@ public class InputInterpreter {
                 if(condition.equals("4")){
                     System.out.println("You have purchased a "+myNewCar.isCondition()+" " +myNewCar.getColor() +" "+myNewCar.getCarType()+ " VIN: "+myNewCar.getVin());
                     System.out.println("Your new Balance is: "+user.getMoney());
+                   //testing
+                    // System.out.println(myNewCar.getId());
                 }
                 break;
             case 4:
