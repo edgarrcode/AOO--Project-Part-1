@@ -6,7 +6,7 @@ public class Finder {
     public int findColumnIndex(String[][] data, String columnName) {
         for (int i = 0; i < data[0].length; i++) {
             if (data[0][i].equalsIgnoreCase(columnName)) {
-                System.out.println(i);
+
                 return i;
             }
         }
