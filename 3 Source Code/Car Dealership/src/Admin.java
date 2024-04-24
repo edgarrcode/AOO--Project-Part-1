@@ -6,10 +6,10 @@ String password;
 String fullName;
 double money;
 String id;
-boolean membership;
+String membership;
 
 String carsBought;
-    public Admin (String id, String fullName, double money,String carsBought, boolean membership,String username, String password) {
+    public Admin (String id, String fullName, double money,String carsBought, String membership,String username, String password) {
         this.username = username;
         this.password = password;
         this.fullName = fullName;
@@ -59,11 +59,11 @@ String carsBought;
         this.id = id;
     }
 
-    public boolean isMembership() {
+    public String isMembership() {
         return membership;
     }
 
-    public void setMembership(boolean membership) {
+    public void setMembership(String membership) {
         this.membership = membership;
     }
 

@@ -1064,3 +1064,701 @@ Apr 22, 2024 12:02:01 AM RunShop3 authenticateUser
 INFO: User attempting to login
 Apr 22, 2024 12:02:05 AM RunShop3 main
 INFO: Application Ended
+Apr 23, 2024 11:59:29 AM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 11:59:29 AM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 11:59:56 AM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:00:13 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:01:18 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:01:18 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:11:03 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:11:03 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:11:07 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:11:10 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:11:12 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 12:11:14 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Back.
+Apr 23, 2024 12:11:18 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 12:11:19 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> New.
+Apr 23, 2024 12:11:25 PM InputInterpreter menuChoice
+INFO: Menu Option: 4. View Tickets
+Apr 23, 2024 12:11:27 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:13:25 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:13:25 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:13:28 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:13:31 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:13:33 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:13:33 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:15:36 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:15:37 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:15:37 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:16:11 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:18:40 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:18:40 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:18:56 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:19:17 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:19:17 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:19:22 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:19:25 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:19:27 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 12:19:27 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> New.
+Apr 23, 2024 12:19:28 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 12:19:29 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 23, 2024 12:19:32 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 12:19:32 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Back.
+Apr 23, 2024 12:19:35 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 12:19:50 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 12:19:55 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:19:55 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:19:59 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:20:01 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 12:20:02 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 12:20:02 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 12:20:02 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 12:20:02 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 12:21:56 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:21:58 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:21:58 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:22:01 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:22:04 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 12:22:32 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 12:22:32 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 12:22:32 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 12:22:32 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 12:23:09 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:23:11 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:23:11 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:23:16 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:23:18 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:23:18 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:23:21 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:24:27 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 12:25:03 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 12:26:53 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:26:53 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:26:59 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:27:01 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:28:43 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 12:28:45 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 12:28:45 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 12:28:45 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 12:28:45 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 12:28:56 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:29:00 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:29:00 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:29:04 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:29:08 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:31:19 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:31:19 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:32:18 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:32:20 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:32:20 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:32:25 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:32:29 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:32:29 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:33:22 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:33:25 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:33:25 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:33:29 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:33:30 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:34:18 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:34:19 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:34:19 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:34:34 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:34:36 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:34:36 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:34:39 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:34:40 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:34:50 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 12:34:51 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 12:50:37 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:50:37 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:50:42 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:50:47 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 12:51:17 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 12:51:21 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 12:51:22 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 12:51:25 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 12:51:36 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 2:48:02 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 2:48:02 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 2:48:06 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 2:48:09 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 2:48:14 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 2:48:14 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 2:48:14 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 2:48:14 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 2:50:45 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 2:57:57 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 2:57:57 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 2:58:02 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 2:58:05 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 2:58:07 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 2:58:07 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 2:58:07 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 2:58:07 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 2:58:13 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:05:07 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:05:07 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:05:12 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 3:05:18 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 3:05:19 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 3:05:19 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 3:05:19 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 3:05:19 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 3:05:46 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 3:05:47 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 3:05:47 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 3:05:47 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 3:05:47 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 3:05:51 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 3:05:53 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 3:05:53 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 3:05:53 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 3:05:53 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 3:05:56 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:11:39 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:11:39 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:11:52 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:15:40 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:15:40 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:15:46 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:23:54 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:23:54 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:24:04 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:25:06 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:25:06 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:25:13 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:25:35 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:25:35 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:25:46 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:26:06 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:26:06 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:29:25 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:29:29 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:29:29 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:33:55 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:33:56 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:33:59 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 3:37:29 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:37:29 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 3:38:28 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 3:59:17 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 3:59:17 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:10:44 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 4:19:06 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:19:06 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:19:38 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:19:45 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:19:48 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:21:03 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:21:03 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:21:09 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:21:11 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:21:13 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:21:13 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 4:21:13 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 4:21:13 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 4:35:58 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 4:35:59 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:35:59 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:36:03 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:36:11 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:36:15 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:36:15 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 4:36:15 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds including tax: 29649.33875
+Apr 23, 2024 4:36:15 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 4:38:35 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:38:35 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:38:40 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:38:41 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:38:42 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:38:42 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 4:38:42 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds including tax: 29649.33875
+Apr 23, 2024 4:38:42 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 4:38:46 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 4:41:33 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:41:33 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:41:37 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:41:39 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:41:40 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:42:39 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:42:39 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:42:42 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:42:43 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:42:45 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:42:45 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 4:42:45 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds including tax: 29649.33875
+Apr 23, 2024 4:42:45 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 4:45:30 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:45:30 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:45:34 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:45:36 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:45:37 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:45:37 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 4:45:37 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds including tax: 29649.33875
+Apr 23, 2024 4:45:37 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 4:45:42 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 4:45:52 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 4:45:52 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 4:45:56 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 4:45:57 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 4:45:59 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 4:45:59 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 4:45:59 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds including tax: 52975.29375
+Apr 23, 2024 4:45:59 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 4:46:02 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 5:14:54 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:14:54 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:15:01 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:15:06 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 5:15:08 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 5:15:08 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 5:15:08 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 5:15:08 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 5:15:21 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 5:17:47 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:17:47 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:18:03 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:18:05 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 5:18:09 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 5:18:09 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 5:18:09 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 5:18:09 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 5:20:14 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 5:20:16 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:20:16 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:20:19 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:20:31 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 5:20:33 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 5:20:33 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 5:20:33 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 5:20:33 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 5:21:45 PM InputInterpreter menuChoice
+INFO: Menu Option: 4. View Tickets
+Apr 23, 2024 5:21:47 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 5:21:49 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:21:49 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:21:52 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:24:25 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:24:25 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:24:28 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:25:24 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:25:24 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:25:31 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:32:31 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:32:31 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:32:34 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:32:55 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:32:55 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:33:00 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:33:33 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:33:33 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:33:39 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:34:45 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:34:45 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:34:48 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:36:41 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:36:41 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:36:44 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:37:15 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:37:15 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:37:18 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:54:45 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:54:45 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:54:48 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:54:53 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 5:54:58 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 5:54:58 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 5:54:58 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds including tax: 35116.315625
+Apr 23, 2024 5:54:58 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 5:55:01 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 5:57:10 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 5:57:10 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 5:57:13 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 5:57:17 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 5:57:21 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 5:57:21 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 5:57:21 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 5:57:21 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 7:52:59 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 7:52:59 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 7:53:05 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 7:53:07 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 7:53:08 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 7:53:10 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 23, 2024 7:53:11 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 7:53:14 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 7:53:14 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 7:53:14 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 7:53:14 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 7:53:19 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 7:53:22 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 7:53:22 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 7:55:32 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 8:02:20 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 8:02:20 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 8:02:26 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 8:02:29 PM InputInterpreter menuChoice
+INFO: Menu Option: 1. Display all cars.
+Apr 23, 2024 8:02:33 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 8:02:34 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 23, 2024 8:02:39 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 8:03:46 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 8:03:46 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 8:03:58 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 23, 2024 8:04:02 PM InputInterpreter menuChoice
+INFO: Menu Option: 3. Purchase a car
+Apr 23, 2024 8:04:05 PM InputInterpreter createCar
+INFO: Creating car type
+Apr 23, 2024 8:04:05 PM InputInterpreter isCarAvailable
+INFO: Checking car availability
+Apr 23, 2024 8:04:05 PM InputInterpreter enoughFunds
+INFO: Checking if user has enough funds
+Apr 23, 2024 8:04:05 PM InputInterpreter purchaseCar
+INFO: Car purchased successfuly
+Apr 23, 2024 8:04:26 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new).
+Apr 23, 2024 8:04:28 PM InputInterpreter menuChoice
+INFO: Menu Option: 2. Filter Cars (used / new)> Used.
+Apr 23, 2024 8:04:36 PM RunShop3 main
+INFO: Application Ended
+Apr 23, 2024 8:04:37 PM RunShop3 main
+INFO: Application Started
+Apr 23, 2024 8:04:38 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 23, 2024 8:08:13 PM RunShop3 main
+INFO: Application Ended

@@ -3,7 +3,7 @@
 */
 public class Customer extends Person{
 
-    public Customer(String id, String fullName, double money,String carsBought, boolean membership,String username, String password) {
+    public Customer(String id, String fullName, double money,String carsBought, String membership,String username, String password) {
         super(id, fullName, money,carsBought , membership,username, password);
     }
     public String getUsername() {
@@ -46,11 +46,11 @@ public class Customer extends Person{
         this.id = id;
     }
 
-    public boolean isMembership() {
+    public String isMembership() {
         return membership;
     }
 
-    public void setMembership(boolean membership) {
+    public void setMembership(String membership) {
         this.membership = membership;
     }
 }

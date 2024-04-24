@@ -1,4 +1,8 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -42,10 +46,10 @@ public class AdminActions {
         System.out.print("HasTurbo: ");
         String hasTurbo = scanner.nextLine();
 
-        String newCar = String.format("\n%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s",
+        String newCar = String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
             capacity, carType, carsAvailable, condition, color, iD, year, price, transmission, vIN, fuelType, model, hasTurbo);
 
-        try (FileWriter fw = new FileWriter("admincar_out.csv", true);
+        try (FileWriter fw = new FileWriter("car_data_out.csv", true);
              BufferedWriter bw = new BufferedWriter(fw)) {
             bw.write(newCar);
         }
@@ -57,7 +61,7 @@ public class AdminActions {
         System.out.print("Enter the ID of the car to remove: ");
         String idToRemove = scanner.nextLine();
 
-        List<String> lines = Files.readAllLines(Paths.get("admincar_out.csv"));
+        List<String> lines = Files.readAllLines(Paths.get("car_data_out.csv"));
         
         // Extract headers
         String[] headers = lines.get(0).split(",");
@@ -88,7 +92,7 @@ public class AdminActions {
         .collect(Collectors.toList());
         System.out.println("printing lines:");
         System.out.println(updatedLines.size());
-        try (FileWriter fw = new FileWriter("admincar_out.csv", false);
+        try (FileWriter fw = new FileWriter("car_data_out.csv", false);
              BufferedWriter bw = new BufferedWriter(fw)) {
             for (String line : updatedLines) {
                 bw.write(line + "\n");
@@ -99,7 +103,7 @@ public class AdminActions {
 
     // Instance method
     public void displayCars() throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("admincar_out.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("car_data_out.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
@@ -128,7 +132,7 @@ public class AdminActions {
         System.out.print("MinerCars Membership (yes/no): ");
         String membership = scanner.nextLine();
 
-        String newUser = String.format("\n%s,%s,%s,%s,%s,%s,%s,%s",
+        String newUser = String.format("%s,%s,%s,%s,%s,%s,%s,%s\n",
             moneyAvailable, password, lastName, id, carsPurchased, firstName, username, membership);
 
         try (FileWriter fw = new FileWriter("user_data_out.csv", true);
@@ -137,4 +141,98 @@ public class AdminActions {
         }
         System.out.println("User added successfully.");
     }
+    /**
+     * Instance method to read the "purchased.csv" file and sum all prices from the Price column.
+     * Assumes the price is in a consistent column index across all rows.
+     */
+    public void getAllRevenue() {
+        String filePath = "purchased.csv";
+        int priceColumnIndex = 8;
+
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
+            double totalPrice = lines.stream()
+                .skip(1) // Skip header row
+                .mapToDouble(line -> {
+                    String[] parts = line.split(",");
+                    return Double.parseDouble(parts[priceColumnIndex].trim()); // Convert the price part to double
+                })
+                .sum(); // Sum all the prices
+
+            System.out.println("Total Price of all purchased cars: $" + totalPrice);
+        } catch (IOException e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Error parsing the prices: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Method to sum prices for cars with matching ID
+     */
+    public void sumPricesMatchedCarIDs() {
+        String filePath = "purchased.csv";
+        int matchColumnIndex = 0;
+        int priceColumnIndex = 8;
+
+        try {
+            // Ask user for the value to match
+            System.out.print("Enter the car ID value: ");
+            String matchValue = scanner.nextLine();
+
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
+            double matchedTotalPrice = lines.stream()
+                .skip(1) // Skip header row
+                .filter(line -> {
+                    String[] parts = line.split(",");
+                    return parts.length > matchColumnIndex && parts[matchColumnIndex].trim().equalsIgnoreCase(matchValue);
+                })
+                .mapToDouble(line -> {
+                    String[] parts = line.split(",");
+                    return Double.parseDouble(parts[priceColumnIndex].trim()); // Convert the price part to double
+                })
+                .sum();
+
+            System.out.println("Total Price of all matched purchased cars: $" + matchedTotalPrice);
+        } catch (IOException e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Error parsing the prices: " + e.getMessage());
+        }
+    }
+
+        /**
+     * Method to sum prices for cars with matching ID
+     */
+    public void sumPricesMatchedCarTypes() {
+        String filePath = "purchased.csv";
+        int matchColumnIndex = 1;
+        int priceColumnIndex = 8;
+
+        try {
+            // Ask user for the value to match
+            System.out.print("Enter the car type (Sedan, SUV, Pickup, or Hatchback): ");
+            String matchValue = scanner.nextLine();
+
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
+            double matchedTotalPrice = lines.stream()
+                .skip(1) // Skip header row
+                .filter(line -> {
+                    String[] parts = line.split(",");
+                    return parts.length > matchColumnIndex && parts[matchColumnIndex].trim().equalsIgnoreCase(matchValue);
+                })
+                .mapToDouble(line -> {
+                    String[] parts = line.split(",");
+                    return Double.parseDouble(parts[priceColumnIndex].trim()); // Convert the price part to double
+                })
+                .sum();
+
+            System.out.println("Total Price of all matched purchased cars: $" + matchedTotalPrice);
+        } catch (IOException e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Error parsing the prices: " + e.getMessage());
+        }
+    }
+
 }

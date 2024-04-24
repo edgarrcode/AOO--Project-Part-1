@@ -9,8 +9,8 @@ public interface User {
     void setMoney(double money);
     String getId();
     void setId(String id);
-    boolean isMembership();
-    void setMembership(boolean membership);
+    String isMembership();
+    void setMembership(String membership);
     String getCarsBought();
     void setCarsBought(String carsBought);
 }

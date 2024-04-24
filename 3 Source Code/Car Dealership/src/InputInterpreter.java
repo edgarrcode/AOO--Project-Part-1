@@ -6,6 +6,10 @@ import java.lang.reflect.Array;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -31,9 +35,9 @@ public class InputInterpreter {
      * @param userMoney
      * @return
      */
-    public boolean enoughFunds(double carCost, double userMoney){
+    public boolean enoughFunds(double totalCost, double userMoney){
         logger.info("Checking if user has enough funds");
-        return userMoney >= carCost;
+        return userMoney >= totalCost;
     }
 
     /**
@@ -87,26 +91,71 @@ public class InputInterpreter {
      * @return
      */
     public String[] purchaseCar(Car car, Person user){
+        String username = user.getUsername();
+        double taxRate = 0.0625;
+        String isMember = user.isMembership();
+        double basePrice = car.getPrice();
+        System.out.println(isMember);
+        // Apply a 10% discount if the user is a member
+        if (isMember != null && isMember.equals("TRUE")) {
+            logger.info("User is a member, giving user a 10% discount!");
+            basePrice *= 0.9; // Reduce price by 10%
+        }
+
+        // Calculate total cost including tax
+        double totalCost = basePrice * (1 + taxRate);
+
         String[] newData = new String[12];
-        if(isCarAvailable(car) && enoughFunds(car.getPrice(),user.getMoney())){
+        if(isCarAvailable(car) && enoughFunds(totalCost, user.getMoney())){
             logger.info("Car purchased successfuly");
             newData[0]=Integer.toString(car.getCarsAvailable()-1);
             newData[1]=Integer.toString(Integer.parseInt(user.getCarsBought())+1);
-            user.setMoney(user.getMoney()-car.getPrice());
+            user.setMoney(user.getMoney() - totalCost);
             newData[2]=Double.toString(user.getMoney());
             newData[3]=car.getColor();
             newData[4]=car.getCarType();
             newData[5]=car.getVin();
+            
+            // Append car details to the "purchased.csv" file
+            appendCarDetailsToPurchasedFile(car, username, totalCost);
         }
         else {
             logger.info("Purchase failed, not enough money.");
-            System.out.println("Not enough M O N E Y");
-            System.out.println("Car cost: "+car.getPrice());
-            System.out.println("Current funds: "+user.getMoney());
+            System.out.println("Not enough money, needed including tax: " + totalCost);
+            System.out.println("Car cost: " + car.getPrice());
+            System.out.println("Tax amount: " + (car.getPrice() * taxRate));
+            System.out.println("Total cost including tax: " + totalCost);
             System.out.println("Returning to menu");
             return newData;
         }
         return newData;
+    }
+
+    /**
+     * Appends all relevant car details to the "purchased.csv" file.
+     * @param car
+     */
+    private void appendCarDetailsToPurchasedFile(Car car, String username, double totalCost) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("purchased.csv", true))) {
+            // Assuming Car class has getters for each field
+            String carDetails = String.join(",",
+                car.getId(),
+                car.getCarType(),
+                car.getModel(),
+                car.getColor(),
+                car.getCapacity(),
+                car.getFuelType(),
+                car.getTransmission(),
+                car.getVin(),
+                String.valueOf(totalCost),
+                String.valueOf(car.getCarsAvailable()),
+                username
+            );
+
+            bw.write(carDetails + "\n");
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Failed to write to purchased.csv", e);
+        }
     }
 
     public String loginInfo(String[] loginInfo,int x){
@@ -150,7 +199,7 @@ public class InputInterpreter {
                 f.valueFinderInRow("First Name",rowContentsForPersonValues,data)[0]+" "+f.valueFinderInRow("Last Name",rowContentsForPersonValues,data)[0],
                 Double.parseDouble(f.valueFinderInRow("Money Available",rowContentsForPersonValues,data)[0]),
                 f.valueFinderInRow("Cars Purchased",rowContentsForPersonValues,data)[0],
-                false,
+                "false",
                 f.valueFinderInRow("Username",rowContentsForPersonValues,data)[0],
                 f.valueFinderInRow("Password",rowContentsForPersonValues,data)[0]
                 );

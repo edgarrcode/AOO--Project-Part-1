@@ -10,9 +10,13 @@
  * @author Carlos Cabral and Edgar Rodriguez
  * @version 1.1
  */
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -29,36 +33,85 @@ public class RunShop3 {
     private static Finder f = new Finder();
 
     public static void showAdminMenu() throws IOException {
+        AdminActions adminActions = new AdminActions(scanner);
         System.out.println("hello admin");
         while (true) {
             System.out.println("\n1. Add Car");
             System.out.println("2. Remove Car");
-            System.out.println("3. Remove Car");
-            System.out.println("4. Exit");
+            System.out.println("3. Display Cars");
+            System.out.println("4. Add User");
+            System.out.println("5. Get Revenue");
+            System.out.println("6. Exit");
             System.out.print("Choose an option: ");
-            int choice = Integer.parseInt(scanner.nextLine());
-
+        
+            int choice = 0;
+            try {
+                choice = Integer.parseInt(scanner.nextLine());  // Attempt to parse the input as an integer
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+                continue;  // Skip the rest of the loop iteration and prompt the user again
+            }
+        
             switch (choice) {
                 case 1:
-                    addCar();
+                    adminActions.addCar();
                     break;
                 case 2:
-                    removeCar();
+                    adminActions.removeCar();
                     break;
                 case 3:
-                    displayCars();
+                    adminActions.displayCars();
+                    break;
                 case 4:
+                    adminActions.addUser();
+                    break;
+                case 5:
+                    System.out.println("1. All Revenue");
+                    System.out.println("2. Revenue by ID");
+                    System.out.println("3. Revenue Car Type");
+                    System.out.println("4. Back");
+                    System.out.print("Choose an option for Revenue: ");
+        
+                    int revenueChoice = 0;
+                    try {
+                        revenueChoice = Integer.parseInt(scanner.nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                        continue;  // Skip to the next iteration of the loop
+                    }
+        
+                    switch (revenueChoice) {
+                        case 1:
+                            adminActions.getAllRevenue();
+                            break;
+                        case 2:
+                            adminActions.sumPricesMatchedCarIDs();
+                            break;
+                        case 3:
+                            adminActions.sumPricesMatchedCarTypes();
+                            break;
+                        case 4:
+                            System.out.println("Returning to main menu...");
+                            break;
+                        default:
+                            System.out.println("Invalid option. Please try again.");
+                            break;
+                    }
+                    break;
+                case 6:
                     System.out.println("Exiting...");
                     return;
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
         }
+        
     }
     public static void showPersonMenu(Person customer,String[][] userData,Finder f) throws Exception {
         System.out.println("Hello " + customer.getFullName());
         reader3.setInputFile("car_data_out.csv");
         String[] infoToSendtoExcel;
+        System.err.println(" user menu");
 
         printer.printMenu();
         int menuInput = Integer.parseInt(scanner.nextLine());
@@ -76,74 +129,10 @@ public class RunShop3 {
         }
         System.out.println("Good bye!");
     }
-    // Admin Method: Add new car
-    private static void addCar() throws IOException {
-        System.out.println("Enter the following details to add a car:");
-        System.out.print("Car Type: ");
-        String carType = scanner.nextLine();
-        System.out.print("Model: ");
-        String model = scanner.nextLine();
-        System.out.print("Condition: ");
-        String condition = scanner.nextLine();
-        System.out.print("Capacity: ");
-        String capacity = scanner.nextLine();
-        System.out.print("Year: ");
-        String year = scanner.nextLine();
-        System.out.print("Fuel Type: ");
-        String fuelType = scanner.nextLine();
-        System.out.print("Transmission: ");
-        String transmission = scanner.nextLine();
-        System.out.print("VIN: ");
-        String vin = scanner.nextLine();
-        System.out.print("Price: ");
-        String price = scanner.nextLine();
-        System.out.print("Cars Available: ");
-        String carsAvailable = scanner.nextLine();
-        System.out.print("Has Turbo (true/false): ");
-        String hasTurbo = scanner.nextLine();
-
-        String newCar = String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n",
-                carType, model, condition, capacity, year, fuelType, transmission, vin, price, carsAvailable, hasTurbo);
-
-        try (FileWriter fw = new FileWriter("admincar_out.csv", true);
-             BufferedWriter bw = new BufferedWriter(fw)) {
-            bw.write(newCar);
-        }
-        System.out.println("Car added successfully.");
-    }
-    //Admin Method: remove existing car
-    private static void removeCar() throws IOException {
-        System.out.print("Enter the VIN of the car to remove: ");
-        String vinToRemove = scanner.nextLine();
-
-        List<String> lines = Files.readAllLines(new File("admincar_out.csv").toPath());
-        List<String> updatedLines = lines.stream()
-                                         .filter(line -> !line.split(",")[7].equals(vinToRemove))
-                                         .collect(Collectors.toList());
-
-        try (FileWriter fw = new FileWriter("admincar_out.csv", false);
-             BufferedWriter bw = new BufferedWriter(fw)) {
-            for (String line : updatedLines) {
-                bw.write(line + "\n");
-            }
-        }
-        System.out.println("Car removed successfully.");
-    }
-    //Admin Method: display cars
-    private static void displayCars() throws IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("admincar_out.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading the file.");
-        }
-    }
     public static void main(String[] args) throws Exception {
         LoggingConfiguration.setupLogging();
         logger.info("Application Started");
-
+        System.err.println("before auth");
         authenticateUser();
 
         logger.info("Application Ended");
