@@ -23,7 +23,8 @@ public class Printer {
                 "2. Filter Cars (used / new)\n" +
                 "3. Purchase a car\n" +
                 "4. View Tickets\n" +
-                "5. Sign out");
+                        "5. Return a car\n"+
+                "6. Sign out");
     }
     public void printFilterCars(){
         System.out.println(
