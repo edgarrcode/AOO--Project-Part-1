@@ -17,6 +17,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -30,6 +31,7 @@ public class RunShop3 {
     private static InputInterpreter interpreter = new InputInterpreter();
     private static FileReader2 reader2 = new FileReader2();
     private static FileReader2 reader3 = new FileReader2();
+    private static FileReader2 reader4 = new FileReader2();
     private static Finder f = new Finder();
 
     public static void showAdminMenu() throws IOException {
@@ -43,7 +45,7 @@ public class RunShop3 {
             System.out.println("5. Get Revenue");
             System.out.println("6. Exit");
             System.out.print("Choose an option: ");
-        
+
             int choice = 0;
             try {
                 choice = Integer.parseInt(scanner.nextLine());  // Attempt to parse the input as an integer
@@ -51,7 +53,7 @@ public class RunShop3 {
                 System.out.println("Invalid input. Please enter a number.");
                 continue;  // Skip the rest of the loop iteration and prompt the user again
             }
-        
+
             switch (choice) {
                 case 1:
                     adminActions.addCar();
@@ -71,7 +73,7 @@ public class RunShop3 {
                     System.out.println("3. Revenue Car Type");
                     System.out.println("4. Back");
                     System.out.print("Choose an option for Revenue: ");
-        
+
                     int revenueChoice = 0;
                     try {
                         revenueChoice = Integer.parseInt(scanner.nextLine());
@@ -79,7 +81,7 @@ public class RunShop3 {
                         System.out.println("Invalid input. Please enter a number.");
                         continue;  // Skip to the next iteration of the loop
                     }
-        
+
                     switch (revenueChoice) {
                         case 1:
                             adminActions.getAllRevenue();
@@ -105,9 +107,10 @@ public class RunShop3 {
                     System.out.println("Invalid option. Please try again.");
             }
         }
-        
+
     }
-    public static void showPersonMenu(Person customer,String[][] userData,Finder f) throws Exception {
+
+    public static void showPersonMenu(Person customer, String[][] userData, Finder f) throws Exception {
         System.out.println("Hello " + customer.getFullName());
         reader3.setInputFile("car_data_out.csv");
         String[] infoToSendtoExcel;
@@ -115,20 +118,25 @@ public class RunShop3 {
 
         printer.printMenu();
         int menuInput = Integer.parseInt(scanner.nextLine());
-        while (menuInput != 5) {
+        while (menuInput != 6) {
             inputLogger.menuLogger(menuInput);
             String[][] carData = reader3.readCSV();
-            infoToSendtoExcel = interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner, customer, f);
+            reader4.setInputFile("purchased.csv");
+            String[][] purchasedCarsData = reader4.readCSV();
+            infoToSendtoExcel = interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner, customer, f, purchasedCarsData);
             //testing
             //System.out.println(Arrays.toString(infoToSendtoExcel));
             if (null != InputInterpreter.getCar()) {
-                updateData(carData, infoToSendtoExcel, customer,userData,f);
+                //testing
+                //System.out.println(customer.getMoney());
+                updateData(carData, infoToSendtoExcel, customer, userData, f);
             }
             printer.printMenu();
             menuInput = Integer.parseInt(scanner.nextLine());
         }
         System.out.println("Good bye!");
     }
+
     public static void main(String[] args) throws Exception {
         LoggingConfiguration.setupLogging();
         logger.info("Application Started");
@@ -141,9 +149,13 @@ public class RunShop3 {
     private static void authenticateUser() throws Exception {
         reader2.setInputFile("user_data_out.csv");
         String[][] data = reader2.readCSV();
+        if (null != data) {
+            //testing
+            //System.out.println("Data is being read " + data[1][2]);
+        }
         logger.info("User attempting to login");
         printer.printLoginUsername();
-        Finder f =new Finder();
+        Finder f = new Finder();
         String username = scanner.nextLine();
 
         if ("admin".equals(username)) {
@@ -152,11 +164,10 @@ public class RunShop3 {
             printer.printLoginPassword();
             String password = scanner.nextLine();
             String[] loginInfo = inputLogger.loginLogger(username, password);
-
             if (interpreter.newLoginChecker(loginInfo, data, f)) {
                 logger.info("Login successful");
                 Person customer = buildPerson(data, username);
-                showPersonMenu(customer,data,f);
+                showPersonMenu(customer, data, f);
             } else {
                 System.out.println("Incorrect login information");
             }
@@ -172,7 +183,7 @@ public class RunShop3 {
 
         String[][] newUserData = reader2.updatedUserDataArrayMaker(userData, infoToSendtoExcel, customer,f );
         //testing
-        //System.out.println(Arrays.toString(newUserData[8]));
+        System.out.println("in updateData()"+Arrays.toString(newUserData[8]));
 
         reader2.writeNewCSV(newUserData, "user_data_out.csv");
         //testing
