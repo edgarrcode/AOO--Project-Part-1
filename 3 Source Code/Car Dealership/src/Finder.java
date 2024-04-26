@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Finder {
@@ -20,6 +21,7 @@ public class Finder {
         for (int i = 0; i < data.length; i++) {
             // Start from row 1 (skip header)
             if (columnIndex < data[i].length) {
+
                 columnValues[i] = data[i][columnIndex];
             }
         }
@@ -27,6 +29,10 @@ public class Finder {
     }
 
     public boolean findUserInputInTheNewColumn(String[] info, String[] columns, int inputType) {
+
+        //System.out.println("In findUserInputInTheNewColumn "+ info[inputType]);
+        //System.out.println("In findUserInputInTheNewColumn index: "+ inputType);
+
         for (int i = 1; i < columns.length; i++) {
             if (info[inputType].equals(columns[i])) {
                 return true;
