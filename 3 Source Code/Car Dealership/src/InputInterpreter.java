@@ -31,7 +31,7 @@ public class InputInterpreter {
 
     /**
      * This method checks if user has enough money to purchase car
-     * @param carCost
+     * @param totalCost
      * @param userMoney
      * @return
      */
@@ -83,6 +83,42 @@ public class InputInterpreter {
 
     }
 
+    public Car createCarToReturn(String[][] carToReturnData,String[][] data,Finder f){
+        if (carToReturnData.length == 0 || carToReturnData[0].length == 0) {
+            throw new IllegalArgumentException("carToBuyData cannot be empty");
+        }
+
+        String carType = carToReturnData[0][1].trim();
+        String[] rowContents = new String[15];
+
+        System.arraycopy(carToReturnData[0], 0, rowContents, 0, carToReturnData[0].length);
+
+
+        logger.info("Creating car type");
+        //depending on the car type a new car object is created
+        switch (carType) {
+            case "Hatchback" -> {
+                Car car=hatchbackBuilder(rowContents,f,data);
+                return car;
+            }
+            case "Sedan" -> {
+                Car car = sedanBuilder(rowContents,f,data);
+                return car;
+            }
+            case "SUV" -> {
+                Car car = SUVBuilder(rowContents,f,data);
+                return car;
+            }
+            case "Pickup" -> {
+                Car car = pickupBuilder(rowContents,f,data);
+                return car;
+            }
+            default -> throw new IllegalArgumentException("Invalid car type: " + carToReturnData[0][1]);
+
+        }
+
+    }
+
     /**
      * This method "purchases" the car by subtracting User money and car availability
      * as well as adding cars purchased to the user
@@ -115,7 +151,9 @@ public class InputInterpreter {
             newData[3]=car.getColor();
             newData[4]=car.getCarType();
             newData[5]=car.getVin();
-            
+            //testing
+            //System.out.println("in purchase car "+newData[2]);
+
             // Append car details to the "purchased.csv" file
             appendCarDetailsToPurchasedFile(car, username, totalCost);
         }
@@ -182,10 +220,11 @@ public class InputInterpreter {
         int userNameIndex=finder.findColumnIndex(newScrambledUserData,"Username");
         int passWordIndex=finder.findColumnIndex(newScrambledUserData,"Password");
 
-        String[] userNames=finder.getColumnValues(newScrambledUserData,userNameIndex);
+
+       String[] userNames=finder.getColumnValues(newScrambledUserData,userNameIndex);
         String[] passWord=finder.getColumnValues(newScrambledUserData,passWordIndex);
 
-        if (finder.findUserInputInTheNewColumn(info,userNames,0) &&
+       if (finder.findUserInputInTheNewColumn(info,userNames,0) &&
                 finder.findUserInputInTheNewColumn(info,passWord,1) ){
             return true;
         }
@@ -282,7 +321,7 @@ public class InputInterpreter {
      * @return
      */
     public String[] menuChoice(int menuInput, FileReader2 fileReader2,
-                           Printer printer, String[][] data, Scanner scanner, Person user, Finder f){
+                           Printer printer, String[][] data, Scanner scanner, Person user, Finder f, String[][] purchasedCarData){
         String[] newDataToSendToExcelFile = new String[6];
 
         switch (menuInput){
@@ -324,9 +363,6 @@ public class InputInterpreter {
                 System.out.println("Please provide ID for the car you want to purchase");
                 String condition= scanner.nextLine();
                 String[][] carToBuyData=fileReader2.filterDataByCondition(data,condition,f.findColumnIndex(data,"ID"));
-
-
-
                 Car myNewCar=createCar(carToBuyData,data,f);
                 setCar(myNewCar);
                 newDataToSendToExcelFile=purchaseCar(myNewCar,user);
@@ -340,13 +376,31 @@ public class InputInterpreter {
                 if(condition.equals("4")){
                     System.out.println("You have purchased a "+myNewCar.isCondition()+" " +myNewCar.getColor() +" "+myNewCar.getCarType()+ " VIN: "+myNewCar.getVin());
                     System.out.println("Your new Balance is: "+user.getMoney());
-                   //testing
-                    // System.out.println(myNewCar.getId());
                 }
                 break;
             case 4:
                 logger.info("Menu Option: 4. View Tickets");
                 System.out.println("You must buy a car first!");
+                break;
+            case 5:
+                if(doesUserHaveCar(f,purchasedCarData,user))
+                {
+                    System.out.println("To return, enter ID:");
+                    condition= scanner.nextLine();
+                    String[][] carToReturn=fileReader2.filterDataByCondition(purchasedCarData,condition,f.findColumnIndex(purchasedCarData,"ID"));
+
+                    carToBuyData=fileReader2.filterDataByCondition(data,condition,f.findColumnIndex(data,"ID"));
+                    System.out.println(carToBuyData[0][0]);
+                    if (null != carToReturn[0][0]){
+                        //testing
+                        //System.out.println(carToReturn[0][0]);
+                        Car newCarToReturn=createCar(carToBuyData,data,f);
+                        System.out.println("You have returned a "+newCarToReturn.isCondition()+" " +newCarToReturn.getColor() +" "+newCarToReturn.getCarType()+ " VIN: "+newCarToReturn.getVin());
+                        double newBalance=user.getMoney()+newCarToReturn.getPrice();
+                        System.out.println("Your new Balance is: "+newBalance);
+
+                    }
+                }
                 break;
         }
         return newDataToSendToExcelFile;
@@ -358,4 +412,21 @@ public class InputInterpreter {
     public static Car getCar() {
         return car;
     }
+
+    public boolean doesUserHaveCar(Finder f,String[][] purchasedCarData,Person person){
+        String[] info = new String[11];
+        info[0]=person.getUsername();
+        //System.out.println(".getusername= "+info[0]);
+
+        int index=f.findColumnIndex(purchasedCarData,"Owner");
+
+        //System.out.println("In doesUserHaveCar index: "+index );
+
+        if(f.findUserInputInTheNewColumn(info,f.getColumnValues(purchasedCarData,index), 0)){
+            return true;
+        }
+        else return false;
+
+    }
 }
+
