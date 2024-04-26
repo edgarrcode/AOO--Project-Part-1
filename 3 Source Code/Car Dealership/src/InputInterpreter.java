@@ -398,8 +398,11 @@ public class InputInterpreter {
                         System.out.println("You have returned a "+newCarToReturn.isCondition()+" " +newCarToReturn.getColor() +" "+newCarToReturn.getCarType()+ " VIN: "+newCarToReturn.getVin());
                         double newBalance=user.getMoney()+newCarToReturn.getPrice();
                         System.out.println("Your new Balance is: "+newBalance);
+                        newDataToSendToExcelFile=purchaseCar(newCarToReturn,user);
 
+                        return newDataToSendToExcelFile;
                     }
+
                 }
                 break;
         }
