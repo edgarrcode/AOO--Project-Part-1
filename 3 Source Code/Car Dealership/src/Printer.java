@@ -5,10 +5,11 @@ import java.util.Arrays;
 
 public class Printer {
 
-    public void printLogin(){
-        System.out.println(
-                "Username: *******\n" +
-                "Password: ********");
+    public void printLoginUsername(){
+        System.out.println("Username:");
+    }
+    public void printLoginPassword(){
+        System.out.println("Password:");
     }
     public void failedLogin(){
         System.out.println("Wrong login information, please log in again.");
@@ -22,7 +23,8 @@ public class Printer {
                 "2. Filter Cars (used / new)\n" +
                 "3. Purchase a car\n" +
                 "4. View Tickets\n" +
-                "5. Sign out");
+                        "5. Return a car\n"+
+                "6. Sign out");
     }
     public void printFilterCars(){
         System.out.println(

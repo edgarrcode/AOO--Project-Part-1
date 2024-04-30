@@ -1,11 +1,24 @@
-/**
-* This Customer class extends Person
-*/
-public class Customer extends Person{
+public class Admin implements User {
 
-    public Customer(String id, String fullName, double money,String carsBought, String membership,String username, String password) {
-        super(id, fullName, money,carsBought , membership,username, password);
+//public abstract class Person {
+String username;
+String password;
+String fullName;
+double money;
+String id;
+String membership;
+
+String carsBought;
+    public Admin (String id, String fullName, double money,String carsBought, String membership,String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.fullName = fullName;
+        this.money = money;
+        this.id = id;
+        this.carsBought=carsBought;
+        this.membership = membership;
     }
+
     public String getUsername() {
         return username;
     }
@@ -34,7 +47,7 @@ public class Customer extends Person{
         return money;
     }
 
-    public void setMoney(double money){
+    public void setMoney(double money) {
         this.money = money;
     }
 
@@ -52,5 +65,13 @@ public class Customer extends Person{
 
     public void setMembership(String membership) {
         this.membership = membership;
+    }
+
+    public String getCarsBought() {
+        return carsBought;
+    }
+
+    public void setCarsBought(String carsBought) {
+        this.carsBought = carsBought;
     }
 }

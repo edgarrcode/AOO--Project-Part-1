@@ -6,11 +6,12 @@
 * Course: CS 3331 – Advanced Object-Oriented Programming
 * Instructor: Dr. Bhanukiran Gurijala
 * Programming assignment 1
-* Honesty Statment: We completed this work entirely on our own without any outside sources including peers, experts, online sources.
+* Honesty Statement: We completed this work entirely on our own without any outside sources including peers, experts, online sources.
 * @author Carlos Cabral and Edgar Rodriguez
 * @version 1.1
 */
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -28,13 +29,17 @@ public class runShop{
         InputInterpreter interpreter = new InputInterpreter();
         FileReader2 reader2 = new FileReader2();
         FileReader2 reader3 = new FileReader2();
+
         logger.info("Application Started");
         reader2.setInputFile("user_data.csv");
         String[][] data = reader2.readCSV();
-        printer.printLogin();
+        
+        printer.printLoginUsername();
         String username = scanner.nextLine();
+        printer.printLoginPassword();
         String password = scanner.nextLine();
         logger.info("User attempted login");
+
         String[] loginInfo = inputLogger.loginLogger(username, password);
         String info = interpreter.loginInfo(loginInfo, 0);
         String[][] userData1 = reader2.filterDataByCondition(data, info, 6);
@@ -46,21 +51,21 @@ public class runShop{
                     userData1[0][4], Boolean.parseBoolean(userData1[0][5]), userData1[0][6], userData1[0][7]);
             System.out.println("Hello "+ customer.getFullName());
             printer.printMenu();
-            int menuInput= Integer.parseInt(scanner.nextLine());
+            int menuInput = MenuInputReader.readMenuIntegerInput(scanner);
             while (menuInput!=5) {
                 inputLogger.menuLogger(menuInput);
                 String[][] carData = reader3.readCSV();
-                Car car=null;
                 infoToSendtoExcel=interpreter.menuChoice(inputLogger.menuLogger(menuInput), reader3, printer, carData, scanner,customer);
                 System.out.println("\n");
-                if (car!=null) {
+                Car car=InputInterpreter.getCar();
+                if (null!=car) {
                     String[][] newUserData=reader2.updatedUserDataArrayMaker(data,infoToSendtoExcel,customer);
-                    reader2.writeNewCSV(newUserData,"user_data2.csv");
+                    reader2.writeNewCSV(newUserData,"user_data.csv");
                     String[][] newCarData= reader3.updatedCarDataArrayMaker(carData,infoToSendtoExcel,InputInterpreter.getCar());
-                    reader3.writeNewCSV(newCarData,"car_data2.csv");   
+                    reader3.writeNewCSV(newCarData,"car_data.csv");
                 }
                 printer.printMenu();
-                menuInput=Integer.parseInt(scanner.nextLine());
+                menuInput = MenuInputReader.readMenuIntegerInput(scanner);
             }
             System.out.println("Good bye!");
         }
