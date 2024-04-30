@@ -1,0 +1,10 @@
+import java.util.logging.Logger;
+
+public class Case1 {
+    public void case1(Logger logger,Printer printer,String[][] data){
+
+        logger.info("Menu Option: 1. Display all cars.");
+        printer.printALLData(data);
+
+    }
+}
