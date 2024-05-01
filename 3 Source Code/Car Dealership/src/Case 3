@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Case3 extends InputInterpreter {
+    private InputInterpreter inputInterpreter = new InputInterpreter();
+    FileReader2 fileReader = new FileReader2();
+    Scanner scanner=new Scanner(System.in);
+    InputInterpreter interpreter= new InputInterpreter();
+    public Case3() {
+        }
+
+    public String[] purchaseCar(Person user, String[][] data, Finder finder) {
+        System.out.println("Please provide ID for the car you want to purchase");
+        String condition = scanner.nextLine();
+        String[][] carToBuyData = fileReader.filterDataByCondition(data, condition, finder.findColumnIndex(data, "ID"));
+        Car myNewCar = inputInterpreter.createCar(carToBuyData, data, finder);
+        inputInterpreter.setCar(myNewCar);
+        ticketShower(myNewCar,user);
+        return inputInterpreter.purchaseCar(myNewCar, user);
+    }
+    public void ticketShower(Car myNewCar,Person user){
+        String condition;
+        System.out.println("Press 4 for ticket!");
+        condition= scanner.nextLine();
+        if(condition.equals("4")){
+            System.out.println("You have purchased a "+myNewCar.isCondition()+" " +myNewCar.getColor() +" "+myNewCar.getCarType()+ " VIN: "+myNewCar.getVin());
+            System.out.println("Your new Balance is: "+user.getMoney());
+        }
+
+    }
+}
