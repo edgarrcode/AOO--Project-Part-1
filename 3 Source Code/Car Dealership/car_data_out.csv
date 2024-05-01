@@ -1,14 +1,14 @@
 Capacity,Car Type,Cars Available,Condition,Color,ID,Year,Price,Transmission,VIN,Fuel Type,Model,hasTurbo
-5,Hatchback,7,New,Yellow,1,2005,23471.55,Automatic,YNA6L2L65Z33P6C4O,Hybrid,Honda Fit,Yes
-5,Sedan,4,New,Silver,2,2010,20688.35,Automatic,61J7MKYN8AUG05XV3,Diesel,Toyota Camry,Yes
+5,Hatchback,null,New,Yellow,1,2005,23471.55,Automatic,YNA6L2L65Z33P6C4O,Hybrid,Honda Fit,Yes
+5,Sedan,null,New,Silver,2,2010,20688.35,Automatic,61J7MKYN8AUG05XV3,Diesel,Toyota Camry,Yes
 5,Sedan,5,New,Red,5,2014,49859.1,Manual,8GMF6CY57FKFWJWF2,Electric,Toyota Camry,Yes
 7,SUV,null,New,White,6,2019,20414.56,Manual,OPKEZUHPO3JAXON37,Hybrid,Ford Explorer,Yes
 5,Pickup,10,New,Black,7,2018,21687.59,Automatic,9OV4OJ6SREVR4V2ZQ,Gasoline,Ford F-150,No
 5,Sedan,10,Used,Silver,8,2004,47923.73,Automatic,LFQPTQR031YTVPP1E,Electric,Honda Accord,No
-5,Sedan,10,New,Black,9,2013,38296.01,Manual,92UZINYP8A0KIJEI9,Diesel,Honda Accord
+5,Sedan,8,New,Black,9,2013,38296.01,Manual,92UZINYP8A0KIJEI9,Diesel,Honda Accord
 5,SUV,3,Used,Yellow,10,2006,27068.68,Automatic,0JXHMCBULISXP7E8J,Diesel,Toyota RAV4
 5,Sedan,7,New,Green,11,2008,43403.38,Automatic,5V4P8GNLJ8HHDB083,Hybrid,Nissan Altima,Yes
-5,Pickup,4,New,Red,12,2012,37757.99,Manual,KFPBWW4MWB2JNA559,Gasoline,Toyota Tacoma
+5,Pickup,3,New,Red,12,2012,37757.99,Manual,KFPBWW4MWB2JNA559,Gasoline,Toyota Tacoma
 5,Pickup,4,Used,Blue,13,2003,33207.49,Automatic,CA31K96L8M3EGKKSE,Hybrid,Chevrolet Silverado
 5,SUV,6,New,White,14,2011,15678.92,Manual,MADRYCTUZDUYDXR08,Hybrid,Honda CR-V
 8,SUV,9,New,White,15,2009,32241.67,Manual,6DOGIG6C1LUL3NZKN,Hybrid,Chevrolet Tahoe,Yes
@@ -25,7 +25,6 @@ Capacity,Car Type,Cars Available,Condition,Color,ID,Year,Price,Transmission,VIN,
 5,Hatchback,7,New,Blue,26,1999,30416.16,Manual,TMVM0ACCVZ7CHHJFJ,Gasoline,Toyota Prius,No
 5,Sedan,3,Used,Silver,27,2005,21834.58,Manual,PKGDM6EAJBHHESCZN,Hybrid,Ford Fusion
 5,Hatchback,9,New,White,28,2010,43488.95,Manual,B00WMZDAPK7YD9NO2,Hybrid,Volkswagen Golf,Yes
-8,SUV,2,New,Red,29,2007,24564.37,Automatic,HPIYT815E1OVZDY1B,Gasoline,Chevrolet Tahoe
 5,SUV,2,Used,Black,30,2002,20900.65,Automatic,7SUS7PDL2XIWOVGP4,Gasoline,Honda CR-V
 5,Sedan,7,New,Silver,31,2014,41626.99,Manual,B2OZX7Y6UIQWU9AOM,Electric,Nissan Altima
 8,SUV,4,Used,Silver,32,2019,46986.52,Automatic,IYCPZSNFORT4KU3RW,Diesel,Chevrolet Tahoe
@@ -99,3 +98,5 @@ Capacity,Car Type,Cars Available,Condition,Color,ID,Year,Price,Transmission,VIN,
 5,Hatchback,3,New,Black,100,2023,24443.93,Manual,7R8A7T8XAH9BKD0U4,Gasoline,Toyota Prius
 7,suv,9,new,red,402,2025,50000,auto,987654321,gas,jeep cherokee,no
 5,sedan,2,used,sand,404,2021,34000,manual,987654321,gas,tesla x,no
+1,motorcycle,2,new,black,400,2024,9999,manual,123456789,gas,xsr900,yes
+4,sedan,3,used,yellow,399,2000,4000,manual,949494949494,ga,honda civic,false

@@ -1762,3 +1762,69 @@ Apr 23, 2024 8:04:38 PM RunShop3 authenticateUser
 INFO: User attempting to login
 Apr 23, 2024 8:08:13 PM RunShop3 main
 INFO: Application Ended
+Apr 24, 2024 11:15:35 PM RunShop3 main
+INFO: Application Started
+Apr 24, 2024 11:15:35 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:14:40 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:14:40 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:18:53 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:18:53 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:19:22 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:19:22 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:38:06 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:38:06 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:40:24 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:40:24 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:40:46 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:40:46 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:41:38 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:41:38 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:42:18 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:42:18 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:44:30 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:44:30 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:45:40 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:45:40 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 25, 2024 8:45:44 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 25, 2024 8:48:24 PM RunShop3 main
+INFO: Application Started
+Apr 25, 2024 8:48:24 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 30, 2024 10:44:50 PM RunShop3 main
+INFO: Application Started
+Apr 30, 2024 10:44:50 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 30, 2024 10:45:33 PM RunShop3 main
+INFO: Application Started
+Apr 30, 2024 10:45:33 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 30, 2024 10:45:35 PM RunShop3 authenticateUser
+INFO: Login successful
+Apr 30, 2024 10:46:27 PM RunShop3 main
+INFO: Application Started
+Apr 30, 2024 10:46:27 PM RunShop3 authenticateUser
+INFO: User attempting to login
+Apr 30, 2024 10:46:41 PM RunShop3 authenticateUser
+INFO: Login successful

@@ -31,7 +31,7 @@ public class RunShop2{
             FileReader2 reader3 = new FileReader2();
             Finder f = new Finder();
             logger.info("Application Started");
-            reader2.setInputFile("user_data2.csv");
+            reader2.setInputFile("user_data_out.csv");
             String[][] data = reader2.readCSV();
             //testing
             //System.out.println(Arrays.deepToString(data));
@@ -49,7 +49,7 @@ public class RunShop2{
             //System.out.println(Arrays.deepToString(userData1));
 
 
-            reader3.setInputFile("car_data2.csv");
+            reader3.setInputFile("car_data_out.csv");
             String[] infoToSendtoExcel;
             if (interpreter.newLoginChecker(loginInfo, data,f)){
                 logger.info("Login successful"); // Log successful login
@@ -88,9 +88,9 @@ public class RunShop2{
                         //debugging
                         //System.out.println(Arrays.toString(new String[]{newUserData[7][3]}));
                         //printer.printALLData(newUserData);
-                        reader2.writeNewCSV(newUserData,"user_data2.csv");
+                        reader2.writeNewCSV(newUserData,"user_data_out.csv");
                         String[][] newCarData= reader3.updatedCarDataArrayMaker(carData,infoToSendtoExcel,InputInterpreter.getCar());
-                        reader3.writeNewCSV(newCarData,"car_data2.csv");
+                        reader3.writeNewCSV(newCarData,"car_data_out.csv");
                     }
                     printer.printMenu();
                     menuInput=Integer.parseInt(scanner.nextLine());

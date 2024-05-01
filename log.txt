@@ -1,0 +1,4 @@
+Apr 30, 2024 10:42:15 PM RunShop3 main
+INFO: Application Started
+Apr 30, 2024 10:42:15 PM RunShop3 authenticateUser
+INFO: User attempting to login
