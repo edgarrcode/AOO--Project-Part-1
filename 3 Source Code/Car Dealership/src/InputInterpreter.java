@@ -326,85 +326,28 @@ public class InputInterpreter {
 
         switch (menuInput){
             case 1:
-            logger.info("Menu Option: 1. Display all cars.");
-            printer.printALLData(data);
-
+                Case1 c1=new Case1();
             break;
             case 2:
-            logger.info("Menu Option: 2. Filter Cars (used / new).");
-                printer.printFilterCars();
-                int x=Integer.parseInt(scanner.nextLine());
-                if (x==1) {
-                    logger.info("Menu Option: 2. Filter Cars (used / new)> New.");
-                    String condition = "new";
-                   printer.printCarData(fileReader2.filterDataByCondition(data, condition, 3));
-                break;
-                }
-                if(x==2){
-                    logger.info("Menu Option: 2. Filter Cars (used / new)> Used.");
-                    String condition = "used";
-                    printer.printCarData(fileReader2.filterDataByCondition(data, condition, 3));
-                    break;
-                }
-                if(x==3){
-                    logger.info("Menu Option: 2. Filter Cars (used / new)> Back.");
-                    System.out.println("Going back to Main menu");
-                    break;
-                    }
-                else {
-                    logger.info("Menu Option: 2. Filter Cars (used / new)> invalid choice, going back to menu.");
-                    System.out.println("invalid choice, going back to menu");
-
-                }
-                return null;
-
+                Case2 c2=new Case2();
+                c2.case2(logger,printer,scanner,fileReader2,data);
+            return null;
             case 3:
-                logger.info("Menu Option: 3. Purchase a car");
-                System.out.println("Please provide ID for the car you want to purchase");
-                String condition= scanner.nextLine();
-                String[][] carToBuyData=fileReader2.filterDataByCondition(data,condition,f.findColumnIndex(data,"ID"));
-                Car myNewCar=createCar(carToBuyData,data,f);
-                setCar(myNewCar);
-                newDataToSendToExcelFile=purchaseCar(myNewCar,user);
-                if (newDataToSendToExcelFile[0]==null){
-                    return null;
-                }
-                //Here we have to ask to filter what car they want to buy, we can use car id
-                //here we set car data=filtered car
-                System.out.println("Press 4 for ticket!");
-                condition= scanner.nextLine();
-                if(condition.equals("4")){
-                    System.out.println("You have purchased a "+myNewCar.isCondition()+" " +myNewCar.getColor() +" "+myNewCar.getCarType()+ " VIN: "+myNewCar.getVin());
-                    System.out.println("Your new Balance is: "+user.getMoney());
-                }
-                break;
+
+                Case3 c=new Case3();
+                String [] carToBuyData=c.purchaseCar(user, data, f);
+                //testing
+                //System.out.println(Arrays.toString(carToBuyData) +"Im here");
+                return carToBuyData;
+
             case 4:
                 logger.info("Menu Option: 4. View Tickets");
                 System.out.println("You must buy a car first!");
                 break;
             case 5:
-                if(doesUserHaveCar(f,purchasedCarData,user))
-                {
-                    System.out.println("To return, enter ID:");
-                    condition= scanner.nextLine();
-                    String[][] carToReturn=fileReader2.filterDataByCondition(purchasedCarData,condition,f.findColumnIndex(purchasedCarData,"ID"));
+                Case5 c5=new Case5();
+                return c5.case5(f,purchasedCarData,user,scanner,fileReader2,data,newDataToSendToExcelFile);
 
-                    carToBuyData=fileReader2.filterDataByCondition(data,condition,f.findColumnIndex(data,"ID"));
-                    System.out.println(carToBuyData[0][0]);
-                    if (null != carToReturn[0][0]){
-                        //testing
-                        //System.out.println(carToReturn[0][0]);
-                        Car newCarToReturn=createCar(carToBuyData,data,f);
-                        System.out.println("You have returned a "+newCarToReturn.isCondition()+" " +newCarToReturn.getColor() +" "+newCarToReturn.getCarType()+ " VIN: "+newCarToReturn.getVin());
-                        double newBalance=user.getMoney()+newCarToReturn.getPrice();
-                        System.out.println("Your new Balance is: "+newBalance);
-                        newDataToSendToExcelFile=purchaseCar(newCarToReturn,user);
-
-                        return newDataToSendToExcelFile;
-                    }
-
-                }
-                break;
         }
         return newDataToSendToExcelFile;
     }
