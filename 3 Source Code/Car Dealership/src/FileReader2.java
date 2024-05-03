@@ -1,10 +1,11 @@
-/**
-* This class Reads and writes the user and car files
-*/
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+/**
+* This class Reads and writes the user and car files
+*/
 public class FileReader2 {
     private String inputFile;
     String[][] data = null;
@@ -118,10 +119,18 @@ public class FileReader2 {
      */
     public String[][] updatedCarDataArrayMaker(String[][] originalData, String[] newData,Car car,Finder f) {
         /**Iterates through original array to find the correct car based on the ID of the car object*/
-        for(int i=0; i<12;i++){
+        //testing
+        //System.out.println("In updatedCarDataArrayMaker "+Arrays.toString(newData));
+        //System.out.println(originalData[1][0]);
+        for(int i=0; i<originalData.length;i++){
+            //System.out.println("in updatedCarDataArrayMaker for loop Car id is "+car.getId());
+
             if (car.getId().equals(originalData[i][f.findColumnIndex(originalData,"ID")])){
                 originalData[i][f.findColumnIndex(originalData,"Cars Available")]=newData[0];
+                //testing
+                //System.out.println("after vaule is updated in updatedCarDataArrayMaker "+originalData[i][f.findColumnIndex(originalData,"Cars Available")]);
             }
+
         }
         /**returns data to be written later*/
         return originalData;

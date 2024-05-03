@@ -1,13 +1,19 @@
-/**
-* This class configures the logger.
-* Find the output of the logger in a "log.txt" file
-*/
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import java.io.IOException;
 
+/**
+* This class configures the logger.
+* Find the output of the logger in a "log.txt" file
+*/
 public class LoggingConfiguration {
+
+    /**
+     * Sets up the logging configuration.
+     * It specifies the file that will store the log messages, sets a formatter to define the format of log messages,
+     * gets the global logger to configure it, adds the FileHandler to the logger, and sets the default logging level.
+     */
     public static void setupLogging() {
         try {
             // Specify the file that will store the log messages

@@ -1,22 +1,43 @@
+import java.util.Arrays;
+
 /**
 * This class manages the print methods
 */
-import java.util.Arrays;
-
 public class Printer {
 
+    /**
+     * Prints a prompt for the user to enter their username.
+     */
     public void printLoginUsername(){
         System.out.println("Username:");
     }
+
+    /**
+     * Prints a prompt for the user to enter their password.
+     */
     public void printLoginPassword(){
         System.out.println("Password:");
     }
+
+    /**
+     * Prints a prompt for the user to enter their name.
+     */
     public void failedLogin(){
         System.out.println("Wrong login information, please log in again.");
     }
+
+    /**
+     * Prints a welcome message for the user.
+     *
+     * @param name the name of the user
+     */
     public void successfulLogin(String name){
         System.out.println("Welcome: "+ name);
     }
+
+    /**
+     * Prints a menu for the user to select an option.
+     */
     public void printMenu(){
         System.out.println(
                 "1. Display all cars.\n" +
@@ -26,6 +47,10 @@ public class Printer {
                         "5. Return a car\n"+
                 "6. Sign out");
     }
+
+    /**
+     * Prints a menu for the user to select an option.
+     */
     public void printFilterCars(){
         System.out.println(
                 "1)New\n" +
@@ -48,6 +73,11 @@ public class Printer {
         }
     }
 
+    /**
+     * Prints the details of a car
+     *
+     * @param data the data of the car
+     */
     public void printCarData(String[][] data) {
         // Check if the data is not null
         if (data != null) {

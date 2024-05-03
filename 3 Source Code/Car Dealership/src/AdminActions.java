@@ -9,14 +9,26 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+/**
+* This class represents the administrative actions that can be performed on the car and user data.
+*/
 public class AdminActions {
     private Scanner scanner;  // Non-static scanner
 
+    /**
+    * Constructs a new AdminActions object with the specified Scanner.
+    *
+    * @param scanner the Scanner to be used for user input
+    */
     public AdminActions(Scanner scanner) {
         this.scanner = scanner;  // Initialize the instance scanner
     }
 
-    // Instance method
+    /**
+    * Prompts the user to enter details for a new car, generates a unique ID for the car, and adds the car to the car_data_out.csv file.
+    *
+    * @throws IOException if an I/O error occurs
+    */
     public void addCar() throws IOException {
         System.out.println("Enter the following details to add a car:");
         System.out.print("Capacity: ");
@@ -29,8 +41,17 @@ public class AdminActions {
         String condition = scanner.nextLine();
         System.out.print("Color: ");
         String color = scanner.nextLine();
-        System.out.print("ID: ");
-        String iD = scanner.nextLine();
+
+        // Calculate new ID
+        List<String> lines = Files.readAllLines(Paths.get("car_data_out.csv"));
+        int maxId = lines.stream()
+            .skip(1) // Skip header
+            .mapToInt(line -> Integer.parseInt(line.split(",")[5])) // Assuming ID is at index 5
+            .max()
+            .orElse(0) + 1; // Start from 1 if no entries found
+
+        String iD = String.valueOf(maxId); // Auto-generated ID
+        
         System.out.print("Year: ");
         String year = scanner.nextLine();
         System.out.print("Price: ");
@@ -56,7 +77,11 @@ public class AdminActions {
         System.out.println("Car added successfully.");
     }
 
-    // Instance method
+   /**
+    * Prompts the user to enter the ID of a car to remove, and removes the car with that ID from the car_data_out.csv file.
+    *
+    * @throws IOException if an I/O error occurs
+    */
     public void removeCar() throws IOException {
         System.out.print("Enter the ID of the car to remove: ");
         String idToRemove = scanner.nextLine();
@@ -101,7 +126,11 @@ public class AdminActions {
         System.out.println("Car removed successfully.");
     }
 
-    // Instance method
+   /**
+    * Displays all cars in the car_data_out.csv file.
+    *
+    * @throws IOException if an I/O error occurs
+    */
     public void displayCars() throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader("car_data_out.csv"))) {
             String line;
@@ -112,7 +141,12 @@ public class AdminActions {
             System.out.println("Error reading the file.");
         }
     }
-    // Instance method
+
+   /**
+    * Prompts the user to enter details for a new user, generates a unique ID for the user, and adds the user to the user_data_out.csv file.
+    *
+    * @throws IOException if an I/O error occurs
+    */
     public void addUser() throws IOException {
         System.out.println("Enter the following details to add a user:");
         System.out.print("Money Available: ");
@@ -121,16 +155,25 @@ public class AdminActions {
         String password = scanner.nextLine();
         System.out.print("Last Name: ");
         String lastName = scanner.nextLine();
-        System.out.print("ID: ");
-        String id = scanner.nextLine();
         System.out.print("Cars Purchased: ");
         String carsPurchased = scanner.nextLine();
         System.out.print("First Name: ");
         String firstName = scanner.nextLine();
         System.out.print("Username: ");
         String username = scanner.nextLine();
-        System.out.print("MinerCars Membership (yes/no): ");
+        System.out.print("MinerCars Membership (True/False): ");
         String membership = scanner.nextLine();
+
+        // Calculate new ID for the user
+        List<String> lines = Files.readAllLines(Paths.get("user_data_out.csv"));
+        int maxId = lines.stream()
+            .skip(1) // Skip header
+            .mapToInt(line -> Integer.parseInt(line.split(",")[3])) // Assuming ID is at index 3
+            .max()
+            .orElse(0) + 1; // Start from 1 if no entries found
+
+        String id = String.valueOf(maxId); // Auto-generated ID
+
 
         String newUser = String.format("%s,%s,%s,%s,%s,%s,%s,%s\n",
             moneyAvailable, password, lastName, id, carsPurchased, firstName, username, membership);
@@ -141,10 +184,10 @@ public class AdminActions {
         }
         System.out.println("User added successfully.");
     }
+   
     /**
-     * Instance method to read the "purchased.csv" file and sum all prices from the Price column.
-     * Assumes the price is in a consistent column index across all rows.
-     */
+    * Reads the purchased.csv file and calculates the total revenue from all car sales.
+    */
     public void getAllRevenue() {
         String filePath = "purchased.csv";
         int priceColumnIndex = 8;
@@ -167,9 +210,9 @@ public class AdminActions {
         }
     }
 
-    /**
-     * Method to sum prices for cars with matching ID
-     */
+   /**
+    * Prompts the user to enter a car ID, and calculates the total revenue from sales of cars with that ID.
+    */
     public void sumPricesMatchedCarIDs() {
         String filePath = "purchased.csv";
         int matchColumnIndex = 0;
@@ -201,9 +244,9 @@ public class AdminActions {
         }
     }
 
-        /**
-     * Method to sum prices for cars with matching ID
-     */
+   /**
+    * Prompts the user to enter a car type, and calculates the total revenue from sales of cars of that type.
+    */
     public void sumPricesMatchedCarTypes() {
         String filePath = "purchased.csv";
         int matchColumnIndex = 1;

@@ -1,6 +1,3 @@
-/**
-* This class has the methods to purchase a car.
-*/
 import java.io.File;
 import java.lang.reflect.Array;
 import java.sql.SQLOutput;
@@ -14,6 +11,9 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+/**
+* This class has the methods to purchase a car.
+*/
 public class InputInterpreter {
     //logger
     private static final Logger logger = Logger.getLogger(InputInterpreter.class.getName());
@@ -41,11 +41,14 @@ public class InputInterpreter {
     }
 
     /**
-     * This method uses a switch/case to generate the car object based on the "Car Type"
-     * At the moment it seems a bit redundant, but I was not able to think of better way to input all
-     * necessary data automatically
-     * @param carToBuyData
-     * @return
+     * This method creates a Car object based on the provided car data.
+     * It uses a switch/case to generate the car object based on the "Car Type".
+     * At the moment it seems a bit redundant, but a better way to input all necessary data automatically is not available.
+     *
+     * @param carToBuyData the data of the car to buy
+     * @param data the data of all cars
+     * @param f the Finder object to find data in the 2D array
+     * @return a Car object representing the car to buy
      */
     public Car createCar(String[][] carToBuyData,String[][] data,Finder f){
         if (carToBuyData.length == 0 || carToBuyData[0].length == 0) {
@@ -131,7 +134,8 @@ public class InputInterpreter {
         double taxRate = 0.0625;
         String isMember = user.isMembership();
         double basePrice = car.getPrice();
-        System.out.println(isMember);
+        //testing
+        //System.out.println(isMember);
         // Apply a 10% discount if the user is a member
         if (isMember != null && isMember.equals("TRUE")) {
             logger.info("User is a member, giving user a 10% discount!");
@@ -152,7 +156,7 @@ public class InputInterpreter {
             newData[4]=car.getCarType();
             newData[5]=car.getVin();
             //testing
-            //System.out.println("in purchase car "+newData[2]);
+            //System.out.println("in purchase car "+newData[0]);
 
             // Append car details to the "purchased.csv" file
             appendCarDetailsToPurchasedFile(car, username, totalCost);
@@ -327,13 +331,13 @@ public class InputInterpreter {
         switch (menuInput){
             case 1:
                 Case1 c1=new Case1();
+                c1.case1(logger,printer,data);
             break;
             case 2:
                 Case2 c2=new Case2();
                 c2.case2(logger,printer,scanner,fileReader2,data);
             return null;
             case 3:
-
                 Case3 c=new Case3();
                 String [] carToBuyData=c.purchaseCar(user, data, f);
                 //testing

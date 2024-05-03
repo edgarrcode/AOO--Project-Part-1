@@ -1,0 +1,12 @@
+Id,CarType,Model,Color,Capacity,FuelType,Transmission,Vin,Price,CarsAvailable,Owner
+65,Hatchback,Honda Fit,Green,5,Electric,Automatic,1T6MEA3VL57ODS0Q5,40523.1975,10,neo
+64,Hatchback,Volkswagen Golf,Yellow,5,Diesel,Manual,BA8J8392BXDNN6R3D,29686.675000000003,10,neo
+63,Sedan,Honda Accord,Yellow,5,Diesel,Manual,SFSUA679JJMN1ZZA5,43174.79375,10,neo
+63,Sedan,Honda Accord,Yellow,5,Diesel,Manual,SFSUA679JJMN1ZZA5,43174.79375,9,neo
+45,Sedan,Toyota Camry,Yellow,5,Hybrid,Automatic,TZAEYQH6GBNP1EXC6,42734.515,10,neo
+45,Sedan,Toyota Camry,Yellow,5,Hybrid,Automatic,TZAEYQH6GBNP1EXC6,42734.515,9,neo
+40,Sedan,Honda Accord,Red,5,Electric,Manual,QTKY18EO5LP9NDHWX,32033.684374999997,10,neo
+100,Hatchback,Toyota Prius,Black,5,Gasoline,Manual,7R8A7T8XAH9BKD0U4,25971.675625,9,neo
+103,Sedan,honda civic,gray,3,gas,manual,3333333,3187.5,2,neo
+103,Sedan,honda civic,gray,3,gas,manual,3333333,3187.5,1,neo
+103,Sedan,honda civic,gray,3,gas,manual,3333333,3187.5,1,neo
